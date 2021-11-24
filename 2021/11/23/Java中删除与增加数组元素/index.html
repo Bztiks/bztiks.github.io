@@ -84,6 +84,10 @@
           <a href="/archives/">Archives</a>
         </li>
       
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">tags</a>
+        </li>
+      
         <li class="nav-item" data-path="/friends/">
           <a href="/friends/">Friends</a>
         </li>
@@ -137,6 +141,17 @@ MathJax = {
           2021-11-23 10:08:10
         </span>
         
+              <span class="post-tags">
+                <i class="iconfont icon-tags" title="Tags"></i>
+                
+                <span class="span--tag">
+                  <a href="/tags/Java/" title="Java">
+                    <b>#</b> Java
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
       <div class="markdown-body">
         <h2 id="Java中删除数组元素"><a href="#Java中删除数组元素" class="headerlink" title="Java中删除数组元素"></a>Java中删除数组元素</h2><h3 id="思路：找到所需要删除的数组元素的下标值，将后一位的值覆盖到前一位，最后一位使用0进行代替，这样会导致数组并没有完全的充满元素，即可能会少一个元素。代码如下"><a href="#思路：找到所需要删除的数组元素的下标值，将后一位的值覆盖到前一位，最后一位使用0进行代替，这样会导致数组并没有完全的充满元素，即可能会少一个元素。代码如下" class="headerlink" title="思路：找到所需要删除的数组元素的下标值，将后一位的值覆盖到前一位，最后一位使用0进行代替，这样会导致数组并没有完全的充满元素，即可能会少一个元素。代码如下:"></a>思路：找到所需要删除的数组元素的下标值，将后一位的值覆盖到前一位，最后一位使用0进行代替，这样会导致数组并没有完全的充满元素，即可能会少一个元素。代码如下:</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DelShuZu</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> a[] = &#123;<span class="number">10</span>,<span class="number">20</span>,<span class="number">5</span>,<span class="number">9</span>,<span class="number">11</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span> i;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">2</span>;i&lt;<span class="number">4</span>;i++)		<span class="comment">//从下标2的元素开始进行循环</span></span><br><span class="line">        &#123;</span><br><span class="line">            a[i] = a[i+<span class="number">1</span>];		<span class="comment">//每次循环后一位的值将赋给前一位</span></span><br><span class="line">            <span class="comment">//System.out.println(a[i]);</span></span><br><span class="line">        &#125;</span><br><span class="line">      	a = Arrays.copyOf(a,a.length-<span class="number">1</span>);	<span class="comment">//复制给新的数组-1</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j : a) &#123;</span><br><span class="line">            System.out.print(j+<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">输出结果:<span class="number">10</span> <span class="number">20</span> <span class="number">9</span> <span class="number">11</span></span><br></pre></td></tr></table></figure>
@@ -162,6 +177,17 @@ MathJax = {
               2021-11-23 10:08:10
             </span>
             
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags" title="Tags"></i>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/Java/" title="Java">
+                        <b>#</b> Java
+                      </a>
+                    </span>
+                    
+                  </span>
+              
           </div>
           <div class="post-foot-prev">
             
