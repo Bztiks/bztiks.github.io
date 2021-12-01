@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>关于网站的主题与优化</title>
+      <link href="/2021/12/01/%E5%85%B3%E4%BA%8E%E7%BD%91%E7%AB%99%E7%9A%84%E4%B8%BB%E9%A2%98%E4%B8%8E%E4%BC%98%E5%8C%96/"/>
+      <url>/2021/12/01/%E5%85%B3%E4%BA%8E%E7%BD%91%E7%AB%99%E7%9A%84%E4%B8%BB%E9%A2%98%E4%B8%8E%E4%BC%98%E5%8C%96/</url>
+      
+        <content type="html"><![CDATA[<h2 id="继安装完成Hexo之后的优化"><a href="#继安装完成Hexo之后的优化" class="headerlink" title="继安装完成Hexo之后的优化"></a>继安装完成Hexo之后的优化</h2><hr><h2 id="具体教程"><a href="#具体教程" class="headerlink" title="具体教程"></a>具体教程</h2><h3 id="1-更换主题"><a href="#1-更换主题" class="headerlink" title="1.更换主题"></a>1.更换主题</h3><h4 id="emsp-本博客使用的主题是oranges（极简），前面提到过，我不喜欢臃肿复杂，偏向于极简清新，逛了半天只看中了oranges，可以选择直接百度搜索hexo主题oranges，这边附上GitHub的网址（https-github-com-zchengsite-hexo-theme-oranges）。"><a href="#emsp-本博客使用的主题是oranges（极简），前面提到过，我不喜欢臃肿复杂，偏向于极简清新，逛了半天只看中了oranges，可以选择直接百度搜索hexo主题oranges，这边附上GitHub的网址（https-github-com-zchengsite-hexo-theme-oranges）。" class="headerlink" title="&emsp; 本博客使用的主题是oranges（极简），前面提到过，我不喜欢臃肿复杂，偏向于极简清新，逛了半天只看中了oranges，可以选择直接百度搜索hexo主题oranges，这边附上GitHub的网址（https://github.com/zchengsite/hexo-theme-oranges）。"></a>&emsp; 本博客使用的主题是oranges（极简），前面提到过，我不喜欢臃肿复杂，偏向于极简清新，逛了半天只看中了oranges，可以选择直接百度搜索hexo主题oranges，这边附上GitHub的网址（<a href="https://github.com/zchengsite/hexo-theme-oranges%EF%BC%89%E3%80%82">https://github.com/zchengsite/hexo-theme-oranges）。</a></h4><h4 id="emsp-如果在Linux下可以直接使用git工具进行下载，注意这里解压的位置是hexo根目录下的themes文件夹中。"><a href="#emsp-如果在Linux下可以直接使用git工具进行下载，注意这里解压的位置是hexo根目录下的themes文件夹中。" class="headerlink" title="&emsp; 如果在Linux下可以直接使用git工具进行下载，注意这里解压的位置是hexo根目录下的themes文件夹中。"></a>&emsp; 如果在Linux下可以直接使用git工具进行下载，注意这里解压的位置是hexo根目录下的themes文件夹中。</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/zchengsite/hexo-theme-oranges.git themes/oranges</span><br></pre></td></tr></table></figure><h4 id="emsp-切换回hexo的根目录找到-config-yml-文件进行编辑，修改其中theme字段为主题名oranges。"><a href="#emsp-切换回hexo的根目录找到-config-yml-文件进行编辑，修改其中theme字段为主题名oranges。" class="headerlink" title="&emsp; 切换回hexo的根目录找到 _config.yml 文件进行编辑，修改其中theme字段为主题名oranges。"></a>&emsp; 切换回hexo的根目录找到 <code>_config.yml</code> 文件进行编辑，修改其中theme字段为主题名<code>oranges</code>。</h4><p><img src="QQ%E6%88%AA%E5%9B%BE20211201104539.png"></p><h4 id="保存退出，执行命令"><a href="#保存退出，执行命令" class="headerlink" title="保存退出，执行命令"></a>保存退出，执行命令</h4><p><code>hexo g</code></p><h4 id="再次访问页面，将会看到oranges主题的默认界面，至于oranges主题的DIY教程可以参考官方手册，有疑惑的可以进行留言。"><a href="#再次访问页面，将会看到oranges主题的默认界面，至于oranges主题的DIY教程可以参考官方手册，有疑惑的可以进行留言。" class="headerlink" title="再次访问页面，将会看到oranges主题的默认界面，至于oranges主题的DIY教程可以参考官方手册，有疑惑的可以进行留言。"></a>再次访问页面，将会看到oranges主题的默认界面，至于oranges主题的DIY教程可以参考官方手册，有疑惑的可以进行留言。</h4><h3 id="2-更换端口将网站发布至web"><a href="#2-更换端口将网站发布至web" class="headerlink" title="2.更换端口将网站发布至web"></a>2.更换端口将网站发布至web</h3><h4 id="方法1：切换回hexo的根目录，找到路径node-modules-hexo-server-index-js进行编辑，找到其中port-4444将其更改为80。"><a href="#方法1：切换回hexo的根目录，找到路径node-modules-hexo-server-index-js进行编辑，找到其中port-4444将其更改为80。" class="headerlink" title="方法1：切换回hexo的根目录，找到路径node_modules \ hexo-server\ index.js进行编辑，找到其中port: 4444将其更改为80。"></a>方法1：切换回hexo的根目录，找到路径node_modules \ hexo-server\ index.js进行编辑，找到其中port: 4444将其更改为80。</h4><h4 id="方法2：使用命令hexo-s-p-80"><a href="#方法2：使用命令hexo-s-p-80" class="headerlink" title="方法2：使用命令hexo s -p 80"></a>方法2：使用命令<code>hexo s -p 80</code></h4>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Server </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java算法之数组奇偶数列输出</title>
       <link href="/2021/12/01/Java%E7%AE%97%E6%B3%95%E4%B9%8B%E6%95%B0%E7%BB%84%E5%A5%87%E5%81%B6%E6%95%B0%E5%88%97%E8%BE%93%E5%87%BA/"/>
       <url>/2021/12/01/Java%E7%AE%97%E6%B3%95%E4%B9%8B%E6%95%B0%E7%BB%84%E5%A5%87%E5%81%B6%E6%95%B0%E5%88%97%E8%BE%93%E5%87%BA/</url>

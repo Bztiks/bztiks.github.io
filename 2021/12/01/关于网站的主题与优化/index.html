@@ -11,7 +11,7 @@
   
   <title>
     
-      Java算法之数组奇偶数列输出 
+      关于网站的主题与优化 
       
       
       |
@@ -134,19 +134,19 @@ MathJax = {
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">Java算法之数组奇偶数列输出</div>
+      <div class="post-title">关于网站的主题与优化</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime" title="Update time"></i>
-          2021-12-01 10:23:54
+          2021-12-01 10:49:33
         </span>
         
               <span class="post-tags">
                 <i class="iconfont icon-tags" title="Tags"></i>
                 
                 <span class="span--tag">
-                  <a href="/tags/Java%E7%AE%97%E6%B3%95%E6%95%B0%E7%BB%84%E5%85%A5%E9%97%A8/" title="Java算法数组入门">
-                    <b>#</b> Java算法数组入门
+                  <a href="/tags/Server/" title="Server">
+                    <b>#</b> Server
                   </a>
                 </span>
                 
@@ -154,19 +154,18 @@ MathJax = {
           
       </div>
       <div class="markdown-body">
-        <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><hr>
-<blockquote>
-<p>编写一程序，（1）随机产生200个三位的正整数，按每行10个数输出。（2）统计其中偶数和奇数的个数。（3）计算并输出偶数、奇数出现的概率。</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Random;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FcA4</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> score[][] = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">20</span>][<span class="number">10</span>];</span><br><span class="line">        <span class="keyword">double</span> OuS = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">double</span> JiS = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> Add = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> a = <span class="number">0</span>; a &lt; <span class="number">20</span>; a++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> b = <span class="number">0</span>; b &lt; <span class="number">10</span>; b++)</span><br><span class="line">            &#123;</span><br><span class="line">                score[a][b] = (<span class="keyword">int</span>)((Math.random()*<span class="number">900</span>)+<span class="number">100</span>);</span><br><span class="line">                <span class="keyword">if</span>(score[a][b] % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    OuS += <span class="number">1</span>;</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    JiS += <span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> a = <span class="number">0</span>; a &lt; <span class="number">20</span>; a++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> b = <span class="number">0</span>; b &lt; <span class="number">10</span>; b++)</span><br><span class="line">            &#123;</span><br><span class="line">                System.out.print(score[a][b]+<span class="string">&quot; &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">double</span> OssU = OuS / <span class="number">200</span>;</span><br><span class="line">        <span class="keyword">double</span> JiiS = JiS / <span class="number">200</span>;</span><br><span class="line">        System.out.println(<span class="string">&quot;偶数个数:&quot;</span>+OuS);</span><br><span class="line">        System.out.println(<span class="string">&quot;奇数个数:&quot;</span>+JiS);</span><br><span class="line">        System.out.print(<span class="string">&quot;偶数出现概率:&quot;</span>);</span><br><span class="line">        System.out.println(String.format(<span class="string">&quot;%.2f&quot;</span>, OssU));</span><br><span class="line">        System.out.print(<span class="string">&quot;奇数出现概率:&quot;</span>);;</span><br><span class="line">        System.out.println(String.format(<span class="string">&quot;%.2f&quot;</span>, JiiS));</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <h2 id="继安装完成Hexo之后的优化"><a href="#继安装完成Hexo之后的优化" class="headerlink" title="继安装完成Hexo之后的优化"></a>继安装完成Hexo之后的优化</h2><hr>
+<h2 id="具体教程"><a href="#具体教程" class="headerlink" title="具体教程"></a>具体教程</h2><h3 id="1-更换主题"><a href="#1-更换主题" class="headerlink" title="1.更换主题"></a>1.更换主题</h3><h4 id="emsp-本博客使用的主题是oranges（极简），前面提到过，我不喜欢臃肿复杂，偏向于极简清新，逛了半天只看中了oranges，可以选择直接百度搜索hexo主题oranges，这边附上GitHub的网址（https-github-com-zchengsite-hexo-theme-oranges）。"><a href="#emsp-本博客使用的主题是oranges（极简），前面提到过，我不喜欢臃肿复杂，偏向于极简清新，逛了半天只看中了oranges，可以选择直接百度搜索hexo主题oranges，这边附上GitHub的网址（https-github-com-zchengsite-hexo-theme-oranges）。" class="headerlink" title="&emsp; 本博客使用的主题是oranges（极简），前面提到过，我不喜欢臃肿复杂，偏向于极简清新，逛了半天只看中了oranges，可以选择直接百度搜索hexo主题oranges，这边附上GitHub的网址（https://github.com/zchengsite/hexo-theme-oranges）。"></a>&emsp; 本博客使用的主题是oranges（极简），前面提到过，我不喜欢臃肿复杂，偏向于极简清新，逛了半天只看中了oranges，可以选择直接百度搜索hexo主题oranges，这边附上GitHub的网址（<a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges%EF%BC%89%E3%80%82">https://github.com/zchengsite/hexo-theme-oranges）。</a></h4><h4 id="emsp-如果在Linux下可以直接使用git工具进行下载，注意这里解压的位置是hexo根目录下的themes文件夹中。"><a href="#emsp-如果在Linux下可以直接使用git工具进行下载，注意这里解压的位置是hexo根目录下的themes文件夹中。" class="headerlink" title="&emsp; 如果在Linux下可以直接使用git工具进行下载，注意这里解压的位置是hexo根目录下的themes文件夹中。"></a>&emsp; 如果在Linux下可以直接使用git工具进行下载，注意这里解压的位置是hexo根目录下的themes文件夹中。</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/zchengsite/hexo-theme-oranges.git themes/oranges</span><br></pre></td></tr></table></figure>
 
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><h3 id="先用Math-random随机生成数，利用for循环每十个数为一行，利用计数器计算奇数与偶数。"><a href="#先用Math-random随机生成数，利用for循环每十个数为一行，利用计数器计算奇数与偶数。" class="headerlink" title="先用Math.random随机生成数，利用for循环每十个数为一行，利用计数器计算奇数与偶数。"></a>先用Math.random随机生成数，利用for循环每十个数为一行，利用计数器计算奇数与偶数。</h3>
+<h4 id="emsp-切换回hexo的根目录找到-config-yml-文件进行编辑，修改其中theme字段为主题名oranges。"><a href="#emsp-切换回hexo的根目录找到-config-yml-文件进行编辑，修改其中theme字段为主题名oranges。" class="headerlink" title="&emsp; 切换回hexo的根目录找到 _config.yml 文件进行编辑，修改其中theme字段为主题名oranges。"></a>&emsp; 切换回hexo的根目录找到 <code>_config.yml</code> 文件进行编辑，修改其中theme字段为主题名<code>oranges</code>。</h4><p><img src="QQ%E6%88%AA%E5%9B%BE20211201104539.png"></p>
+<h4 id="保存退出，执行命令"><a href="#保存退出，执行命令" class="headerlink" title="保存退出，执行命令"></a>保存退出，执行命令</h4><p><code>hexo g</code></p>
+<h4 id="再次访问页面，将会看到oranges主题的默认界面，至于oranges主题的DIY教程可以参考官方手册，有疑惑的可以进行留言。"><a href="#再次访问页面，将会看到oranges主题的默认界面，至于oranges主题的DIY教程可以参考官方手册，有疑惑的可以进行留言。" class="headerlink" title="再次访问页面，将会看到oranges主题的默认界面，至于oranges主题的DIY教程可以参考官方手册，有疑惑的可以进行留言。"></a>再次访问页面，将会看到oranges主题的默认界面，至于oranges主题的DIY教程可以参考官方手册，有疑惑的可以进行留言。</h4><h3 id="2-更换端口将网站发布至web"><a href="#2-更换端口将网站发布至web" class="headerlink" title="2.更换端口将网站发布至web"></a>2.更换端口将网站发布至web</h3><h4 id="方法1：切换回hexo的根目录，找到路径node-modules-hexo-server-index-js进行编辑，找到其中port-4444将其更改为80。"><a href="#方法1：切换回hexo的根目录，找到路径node-modules-hexo-server-index-js进行编辑，找到其中port-4444将其更改为80。" class="headerlink" title="方法1：切换回hexo的根目录，找到路径node_modules \ hexo-server\ index.js进行编辑，找到其中port: 4444将其更改为80。"></a>方法1：切换回hexo的根目录，找到路径node_modules \ hexo-server\ index.js进行编辑，找到其中port: 4444将其更改为80。</h4><h4 id="方法2：使用命令hexo-s-p-80"><a href="#方法2：使用命令hexo-s-p-80" class="headerlink" title="方法2：使用命令hexo s -p 80"></a>方法2：使用命令<code>hexo s -p 80</code></h4>
       </div>
       
         <div class="prev-or-next">
           <div class="post-foot-next">
             
-              <a href="/2021/12/01/Java%E7%AE%97%E6%B3%95%E4%B9%8B%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E5%AF%84%E5%AD%98%E6%B1%82%E5%92%8C/" target="_self">
+              <a href="/2021/12/01/Java%E7%AE%97%E6%B3%95%E4%B9%8B%E6%95%B0%E7%BB%84%E5%A5%87%E5%81%B6%E6%95%B0%E5%88%97%E8%BE%93%E5%87%BA/" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
                 <span>Prev</span>
               </a>
@@ -175,15 +174,15 @@ MathJax = {
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime" title="Update time"></i>
-              2021-12-01 10:23:54
+              2021-12-01 10:49:33
             </span>
             
                   <span class="post-tags">
                     <i class="iconfont icon-tags" title="Tags"></i>
                     
                     <span class="span--tag">
-                      <a href="/tags/Java%E7%AE%97%E6%B3%95%E6%95%B0%E7%BB%84%E5%85%A5%E9%97%A8/" title="Java算法数组入门">
-                        <b>#</b> Java算法数组入门
+                      <a href="/tags/Server/" title="Server">
+                        <b>#</b> Server
                       </a>
                     </span>
                     
@@ -191,11 +190,6 @@ MathJax = {
               
           </div>
           <div class="post-foot-prev">
-            
-              <a href="/2021/12/01/%E5%85%B3%E4%BA%8E%E7%BD%91%E7%AB%99%E7%9A%84%E4%B8%BB%E9%A2%98%E4%B8%8E%E4%BC%98%E5%8C%96/" target="_self">
-                <span>Next</span>
-                <i class="iconfont icon-chevronright"></i>
-              </a>
             
           </div>
         </div>
@@ -208,7 +202,7 @@ MathJax = {
   <div class="post-catalog hidden" id="catalog">
     <div class="title">Contents</div>
     <div class="catalog-content">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="toc-text">题目描述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="toc-text">解题思路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%88%E7%94%A8Math-random%E9%9A%8F%E6%9C%BA%E7%94%9F%E6%88%90%E6%95%B0%EF%BC%8C%E5%88%A9%E7%94%A8for%E5%BE%AA%E7%8E%AF%E6%AF%8F%E5%8D%81%E4%B8%AA%E6%95%B0%E4%B8%BA%E4%B8%80%E8%A1%8C%EF%BC%8C%E5%88%A9%E7%94%A8%E8%AE%A1%E6%95%B0%E5%99%A8%E8%AE%A1%E7%AE%97%E5%A5%87%E6%95%B0%E4%B8%8E%E5%81%B6%E6%95%B0%E3%80%82"><span class="toc-text">先用Math.random随机生成数，利用for循环每十个数为一行，利用计数器计算奇数与偶数。</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%A7%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90Hexo%E4%B9%8B%E5%90%8E%E7%9A%84%E4%BC%98%E5%8C%96"><span class="toc-text">继安装完成Hexo之后的优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E6%95%99%E7%A8%8B"><span class="toc-text">具体教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98"><span class="toc-text">1.更换主题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#emsp-%E6%9C%AC%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E7%9A%84%E4%B8%BB%E9%A2%98%E6%98%AForanges%EF%BC%88%E6%9E%81%E7%AE%80%EF%BC%89%EF%BC%8C%E5%89%8D%E9%9D%A2%E6%8F%90%E5%88%B0%E8%BF%87%EF%BC%8C%E6%88%91%E4%B8%8D%E5%96%9C%E6%AC%A2%E8%87%83%E8%82%BF%E5%A4%8D%E6%9D%82%EF%BC%8C%E5%81%8F%E5%90%91%E4%BA%8E%E6%9E%81%E7%AE%80%E6%B8%85%E6%96%B0%EF%BC%8C%E9%80%9B%E4%BA%86%E5%8D%8A%E5%A4%A9%E5%8F%AA%E7%9C%8B%E4%B8%AD%E4%BA%86oranges%EF%BC%8C%E5%8F%AF%E4%BB%A5%E9%80%89%E6%8B%A9%E7%9B%B4%E6%8E%A5%E7%99%BE%E5%BA%A6%E6%90%9C%E7%B4%A2hexo%E4%B8%BB%E9%A2%98oranges%EF%BC%8C%E8%BF%99%E8%BE%B9%E9%99%84%E4%B8%8AGitHub%E7%9A%84%E7%BD%91%E5%9D%80%EF%BC%88https-github-com-zchengsite-hexo-theme-oranges%EF%BC%89%E3%80%82"><span class="toc-text">  本博客使用的主题是oranges（极简），前面提到过，我不喜欢臃肿复杂，偏向于极简清新，逛了半天只看中了oranges，可以选择直接百度搜索hexo主题oranges，这边附上GitHub的网址（https:&#x2F;&#x2F;github.com&#x2F;zchengsite&#x2F;hexo-theme-oranges）。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#emsp-%E5%A6%82%E6%9E%9C%E5%9C%A8Linux%E4%B8%8B%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8git%E5%B7%A5%E5%85%B7%E8%BF%9B%E8%A1%8C%E4%B8%8B%E8%BD%BD%EF%BC%8C%E6%B3%A8%E6%84%8F%E8%BF%99%E9%87%8C%E8%A7%A3%E5%8E%8B%E7%9A%84%E4%BD%8D%E7%BD%AE%E6%98%AFhexo%E6%A0%B9%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84themes%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD%E3%80%82"><span class="toc-text">  如果在Linux下可以直接使用git工具进行下载，注意这里解压的位置是hexo根目录下的themes文件夹中。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#emsp-%E5%88%87%E6%8D%A2%E5%9B%9Ehexo%E7%9A%84%E6%A0%B9%E7%9B%AE%E5%BD%95%E6%89%BE%E5%88%B0-config-yml-%E6%96%87%E4%BB%B6%E8%BF%9B%E8%A1%8C%E7%BC%96%E8%BE%91%EF%BC%8C%E4%BF%AE%E6%94%B9%E5%85%B6%E4%B8%ADtheme%E5%AD%97%E6%AE%B5%E4%B8%BA%E4%B8%BB%E9%A2%98%E5%90%8Doranges%E3%80%82"><span class="toc-text">  切换回hexo的根目录找到 _config.yml 文件进行编辑，修改其中theme字段为主题名oranges。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%9D%E5%AD%98%E9%80%80%E5%87%BA%EF%BC%8C%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4"><span class="toc-text">保存退出，执行命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%8D%E6%AC%A1%E8%AE%BF%E9%97%AE%E9%A1%B5%E9%9D%A2%EF%BC%8C%E5%B0%86%E4%BC%9A%E7%9C%8B%E5%88%B0oranges%E4%B8%BB%E9%A2%98%E7%9A%84%E9%BB%98%E8%AE%A4%E7%95%8C%E9%9D%A2%EF%BC%8C%E8%87%B3%E4%BA%8Eoranges%E4%B8%BB%E9%A2%98%E7%9A%84DIY%E6%95%99%E7%A8%8B%E5%8F%AF%E4%BB%A5%E5%8F%82%E8%80%83%E5%AE%98%E6%96%B9%E6%89%8B%E5%86%8C%EF%BC%8C%E6%9C%89%E7%96%91%E6%83%91%E7%9A%84%E5%8F%AF%E4%BB%A5%E8%BF%9B%E8%A1%8C%E7%95%99%E8%A8%80%E3%80%82"><span class="toc-text">再次访问页面，将会看到oranges主题的默认界面，至于oranges主题的DIY教程可以参考官方手册，有疑惑的可以进行留言。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%9B%B4%E6%8D%A2%E7%AB%AF%E5%8F%A3%E5%B0%86%E7%BD%91%E7%AB%99%E5%8F%91%E5%B8%83%E8%87%B3web"><span class="toc-text">2.更换端口将网站发布至web</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%951%EF%BC%9A%E5%88%87%E6%8D%A2%E5%9B%9Ehexo%E7%9A%84%E6%A0%B9%E7%9B%AE%E5%BD%95%EF%BC%8C%E6%89%BE%E5%88%B0%E8%B7%AF%E5%BE%84node-modules-hexo-server-index-js%E8%BF%9B%E8%A1%8C%E7%BC%96%E8%BE%91%EF%BC%8C%E6%89%BE%E5%88%B0%E5%85%B6%E4%B8%ADport-4444%E5%B0%86%E5%85%B6%E6%9B%B4%E6%94%B9%E4%B8%BA80%E3%80%82"><span class="toc-text">方法1：切换回hexo的根目录，找到路径node_modules \ hexo-server\ index.js进行编辑，找到其中port: 4444将其更改为80。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%952%EF%BC%9A%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4hexo-s-p-80"><span class="toc-text">方法2：使用命令hexo s -p 80</span></a></li></ol></li></ol></li></ol>
     </div>
   </div>
 
@@ -546,12 +540,12 @@ MathJax = {
       </a>
       <div class="share-content hidden">
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + Java%E7%AE%97%E6%B3%95%E4%B9%8B%E6%95%B0%E7%BB%84%E5%A5%87%E5%81%B6%E6%95%B0%E5%88%97%E8%BE%93%E5%87%BA + '&url=' + http%3A%2F%2Fexample.com%2F2021%2F12%2F01%2FJava%25E7%25AE%2597%25E6%25B3%2595%25E4%25B9%258B%25E6%2595%25B0%25E7%25BB%2584%25E5%25A5%2587%25E5%2581%25B6%25E6%2595%25B0%25E5%2588%2597%25E8%25BE%2593%25E5%2587%25BA%2F + '" target="_blank" title="Twitter">
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + %E5%85%B3%E4%BA%8E%E7%BD%91%E7%AB%99%E7%9A%84%E4%B8%BB%E9%A2%98%E4%B8%8E%E4%BC%98%E5%8C%96 + '&url=' + http%3A%2F%2Fexample.com%2F2021%2F12%2F01%2F%25E5%2585%25B3%25E4%25BA%258E%25E7%25BD%2591%25E7%25AB%2599%25E7%259A%2584%25E4%25B8%25BB%25E9%25A2%2598%25E4%25B8%258E%25E4%25BC%2598%25E5%258C%2596%2F + '" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         
         
-          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2021/12/01/Java%E7%AE%97%E6%B3%95%E4%B9%8B%E6%95%B0%E7%BB%84%E5%A5%87%E5%81%B6%E6%95%B0%E5%88%97%E8%BE%93%E5%87%BA/" target="_blank" title="Facebook">
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2021/12/01/%E5%85%B3%E4%BA%8E%E7%BD%91%E7%AB%99%E7%9A%84%E4%B8%BB%E9%A2%98%E4%B8%8E%E4%BC%98%E5%8C%96/" target="_blank" title="Facebook">
             <i class="iconfont icon-facebooksquare"></i>
           </a>
         
