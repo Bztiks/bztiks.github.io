@@ -11,7 +11,7 @@
   
   <title>
     
-      Java算法之温度转化 
+      Java算法之数组奇偶数列输出 
       
       
       |
@@ -134,19 +134,19 @@ MathJax = {
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">Java算法之温度转化</div>
+      <div class="post-title">Java算法之数组奇偶数列输出</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime" title="Update time"></i>
-          2021-11-25 10:25:47
+          2021-12-01 10:23:54
         </span>
         
               <span class="post-tags">
                 <i class="iconfont icon-tags" title="Tags"></i>
                 
                 <span class="span--tag">
-                  <a href="/tags/Java%E5%85%A5%E9%97%A8%E7%AE%97%E6%B3%95/" title="Java入门算法">
-                    <b>#</b> Java入门算法
+                  <a href="/tags/Java%E7%AE%97%E6%B3%95%E6%95%B0%E7%BB%84%E5%85%A5%E9%97%A8/" title="Java算法数组入门">
+                    <b>#</b> Java算法数组入门
                   </a>
                 </span>
                 
@@ -155,16 +155,17 @@ MathJax = {
       </div>
       <div class="markdown-body">
         <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><blockquote>
-<p>编一程序，将摄氏温度换为华氏温度。公式为：f=9*c/c+32。其中f为华氏温度,c是摄氏温度。</p>
+<p>编写一程序，（1）随机产生200个三位的正整数，按每行10个数输出。（2）统计其中偶数和奇数的个数。（3）计算并输出偶数、奇数出现的概率。</p>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.sound.midi.SysexMessage;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WenDuZH</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> c = in.nextInt();</span><br><span class="line">        <span class="keyword">double</span> f = (<span class="number">9</span>*c/<span class="number">5.0</span>)+<span class="number">32.0</span>;</span><br><span class="line">        System.out.print(String.format(<span class="string">&quot;%.2f&quot;</span>,f));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Random;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FcA4</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> score[][] = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">20</span>][<span class="number">10</span>];</span><br><span class="line">        <span class="keyword">double</span> OuS = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">double</span> JiS = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> Add = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> a = <span class="number">0</span>; a &lt; <span class="number">20</span>; a++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> b = <span class="number">0</span>; b &lt; <span class="number">10</span>; b++)</span><br><span class="line">            &#123;</span><br><span class="line">                score[a][b] = (<span class="keyword">int</span>)((Math.random()*<span class="number">900</span>)+<span class="number">100</span>);</span><br><span class="line">                <span class="keyword">if</span>(score[a][b] % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    OuS += <span class="number">1</span>;</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    JiS += <span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> a = <span class="number">0</span>; a &lt; <span class="number">20</span>; a++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> b = <span class="number">0</span>; b &lt; <span class="number">10</span>; b++)</span><br><span class="line">            &#123;</span><br><span class="line">                System.out.print(score[a][b]+<span class="string">&quot; &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">double</span> OssU = OuS / <span class="number">200</span>;</span><br><span class="line">        <span class="keyword">double</span> JiiS = JiS / <span class="number">200</span>;</span><br><span class="line">        System.out.println(<span class="string">&quot;偶数个数:&quot;</span>+OuS);</span><br><span class="line">        System.out.println(<span class="string">&quot;奇数个数:&quot;</span>+JiS);</span><br><span class="line">        System.out.print(<span class="string">&quot;偶数出现概率:&quot;</span>);</span><br><span class="line">        System.out.println(String.format(<span class="string">&quot;%.2f&quot;</span>, OssU));</span><br><span class="line">        System.out.print(<span class="string">&quot;奇数出现概率:&quot;</span>);;</span><br><span class="line">        System.out.println(String.format(<span class="string">&quot;%.2f&quot;</span>, JiiS));</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><h3 id="先用Math-random随机生成数，利用for循环每十个数为一行，利用计数器计算奇数与偶数。"><a href="#先用Math-random随机生成数，利用for循环每十个数为一行，利用计数器计算奇数与偶数。" class="headerlink" title="先用Math.random随机生成数，利用for循环每十个数为一行，利用计数器计算奇数与偶数。"></a>先用Math.random随机生成数，利用for循环每十个数为一行，利用计数器计算奇数与偶数。</h3>
       </div>
       
         <div class="prev-or-next">
           <div class="post-foot-next">
             
-              <a href="/2021/11/25/Java%E7%AE%97%E6%B3%95%E4%B9%8B%E5%9C%86%E7%9A%84%E9%9D%A2%E7%A7%AF%E5%92%8C%E5%91%A8%E9%95%BF/" target="_self">
+              <a href="/2021/12/01/Java%E7%AE%97%E6%B3%95%E4%B9%8B%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E5%AF%84%E5%AD%98%E6%B1%82%E5%92%8C/" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
                 <span>Prev</span>
               </a>
@@ -173,15 +174,15 @@ MathJax = {
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime" title="Update time"></i>
-              2021-11-25 10:25:47
+              2021-12-01 10:23:54
             </span>
             
                   <span class="post-tags">
                     <i class="iconfont icon-tags" title="Tags"></i>
                     
                     <span class="span--tag">
-                      <a href="/tags/Java%E5%85%A5%E9%97%A8%E7%AE%97%E6%B3%95/" title="Java入门算法">
-                        <b>#</b> Java入门算法
+                      <a href="/tags/Java%E7%AE%97%E6%B3%95%E6%95%B0%E7%BB%84%E5%85%A5%E9%97%A8/" title="Java算法数组入门">
+                        <b>#</b> Java算法数组入门
                       </a>
                     </span>
                     
@@ -189,11 +190,6 @@ MathJax = {
               
           </div>
           <div class="post-foot-prev">
-            
-              <a href="/2021/12/01/Java%E7%AE%97%E6%B3%95%E4%B9%8B%E6%95%B0%E7%BB%84%E6%B1%82%E6%9C%80%E5%A4%A7%E5%80%BC%E4%BD%8D%E7%BD%AE/" target="_self">
-                <span>Next</span>
-                <i class="iconfont icon-chevronright"></i>
-              </a>
             
           </div>
         </div>
@@ -206,7 +202,7 @@ MathJax = {
   <div class="post-catalog hidden" id="catalog">
     <div class="title">Contents</div>
     <div class="catalog-content">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="toc-text">题目描述</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="toc-text">题目描述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="toc-text">解题思路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%88%E7%94%A8Math-random%E9%9A%8F%E6%9C%BA%E7%94%9F%E6%88%90%E6%95%B0%EF%BC%8C%E5%88%A9%E7%94%A8for%E5%BE%AA%E7%8E%AF%E6%AF%8F%E5%8D%81%E4%B8%AA%E6%95%B0%E4%B8%BA%E4%B8%80%E8%A1%8C%EF%BC%8C%E5%88%A9%E7%94%A8%E8%AE%A1%E6%95%B0%E5%99%A8%E8%AE%A1%E7%AE%97%E5%A5%87%E6%95%B0%E4%B8%8E%E5%81%B6%E6%95%B0%E3%80%82"><span class="toc-text">先用Math.random随机生成数，利用for循环每十个数为一行，利用计数器计算奇数与偶数。</span></a></li></ol></li></ol></li></ol>
     </div>
   </div>
 
@@ -544,12 +540,12 @@ MathJax = {
       </a>
       <div class="share-content hidden">
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + Java%E7%AE%97%E6%B3%95%E4%B9%8B%E6%B8%A9%E5%BA%A6%E8%BD%AC%E5%8C%96 + '&url=' + http%3A%2F%2Fexample.com%2F2021%2F11%2F25%2FJava%25E7%25AE%2597%25E6%25B3%2595%25E4%25B9%258B%25E6%25B8%25A9%25E5%25BA%25A6%25E8%25BD%25AC%25E5%258C%2596%2F + '" target="_blank" title="Twitter">
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + Java%E7%AE%97%E6%B3%95%E4%B9%8B%E6%95%B0%E7%BB%84%E5%A5%87%E5%81%B6%E6%95%B0%E5%88%97%E8%BE%93%E5%87%BA + '&url=' + http%3A%2F%2Fexample.com%2F2021%2F12%2F01%2FJava%25E7%25AE%2597%25E6%25B3%2595%25E4%25B9%258B%25E6%2595%25B0%25E7%25BB%2584%25E5%25A5%2587%25E5%2581%25B6%25E6%2595%25B0%25E5%2588%2597%25E8%25BE%2593%25E5%2587%25BA%2F + '" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         
         
-          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2021/11/25/Java%E7%AE%97%E6%B3%95%E4%B9%8B%E6%B8%A9%E5%BA%A6%E8%BD%AC%E5%8C%96/" target="_blank" title="Facebook">
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2021/12/01/Java%E7%AE%97%E6%B3%95%E4%B9%8B%E6%95%B0%E7%BB%84%E5%A5%87%E5%81%B6%E6%95%B0%E5%88%97%E8%BE%93%E5%87%BA/" target="_blank" title="Facebook">
             <i class="iconfont icon-facebooksquare"></i>
           </a>
         

@@ -11,7 +11,7 @@
   
   <title>
     
-      Java算法之温度转化 
+      Java算法之数组求最大值位置 
       
       
       |
@@ -134,19 +134,19 @@ MathJax = {
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">Java算法之温度转化</div>
+      <div class="post-title">Java算法之数组求最大值位置</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime" title="Update time"></i>
-          2021-11-25 10:25:47
+          2021-12-01 10:16:52
         </span>
         
               <span class="post-tags">
                 <i class="iconfont icon-tags" title="Tags"></i>
                 
                 <span class="span--tag">
-                  <a href="/tags/Java%E5%85%A5%E9%97%A8%E7%AE%97%E6%B3%95/" title="Java入门算法">
-                    <b>#</b> Java入门算法
+                  <a href="/tags/Java%E7%AE%97%E6%B3%95%E6%95%B0%E7%BB%84%E5%85%A5%E9%97%A8/" title="Java算法数组入门">
+                    <b>#</b> Java算法数组入门
                   </a>
                 </span>
                 
@@ -155,16 +155,17 @@ MathJax = {
       </div>
       <div class="markdown-body">
         <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><blockquote>
-<p>编一程序，将摄氏温度换为华氏温度。公式为：f=9*c/c+32。其中f为华氏温度,c是摄氏温度。</p>
+<p>建立一个5行3列的整型数组，找出其中最大的元素所在的行和列，并输出该值及其行、列位置。（以0为起始位置）</p>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.sound.midi.SysexMessage;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WenDuZH</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> c = in.nextInt();</span><br><span class="line">        <span class="keyword">double</span> f = (<span class="number">9</span>*c/<span class="number">5.0</span>)+<span class="number">32.0</span>;</span><br><span class="line">        System.out.print(String.format(<span class="string">&quot;%.2f&quot;</span>,f));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.reflect.Array;</span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FcA2</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> score[][] = &#123;&#123;<span class="number">1</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">7</span>&#125;,&#123;<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">1</span>&#125;,&#123;<span class="number">4</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">0</span>&#125;,&#123;<span class="number">4</span>,<span class="number">2</span>,<span class="number">6</span>,<span class="number">9</span>&#125;,&#123;<span class="number">3</span>,<span class="number">7</span>,<span class="number">20</span>,<span class="number">21</span>&#125;,&#123;<span class="number">4</span>,<span class="number">6</span>,<span class="number">9</span>,<span class="number">19</span>&#125;&#125;;</span><br><span class="line">        <span class="comment">//System.out.print(score[5][3]);</span></span><br><span class="line">        <span class="keyword">int</span> Add = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">//Arrays.sort(score);</span></span><br><span class="line">        <span class="keyword">int</span> Aa = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> Ab = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> a = <span class="number">0</span>; a &lt;= <span class="number">5</span>; a++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> b = <span class="number">0</span>; b &lt; <span class="number">3</span>; b++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(Add &lt; score[a][b+<span class="number">1</span>])</span><br><span class="line">                &#123;</span><br><span class="line">                    Add = score[a][b+<span class="number">1</span>];</span><br><span class="line">                    System.out.println(score[a][b+<span class="number">1</span>]);</span><br><span class="line">                    <span class="comment">//System.out.println(score[a][b+1]);</span></span><br><span class="line">                    <span class="comment">//System.out.println(score[a][b+1]);</span></span><br><span class="line">                    Aa = a;</span><br><span class="line">                    Ab = b+<span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//System.out.println();</span></span><br><span class="line">        &#125;</span><br><span class="line">       System.out.print(<span class="string">&quot;最大值在第&quot;</span>+Aa+<span class="string">&quot;行&quot;</span>+Ab+<span class="string">&quot;列&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><h3 id="用循环先遍历数组中的内容，以对比的方式将较大值赋值进入Add变量，将每行的最大值取出来进行比较，取出最大值的最大值。"><a href="#用循环先遍历数组中的内容，以对比的方式将较大值赋值进入Add变量，将每行的最大值取出来进行比较，取出最大值的最大值。" class="headerlink" title="用循环先遍历数组中的内容，以对比的方式将较大值赋值进入Add变量，将每行的最大值取出来进行比较，取出最大值的最大值。"></a>用循环先遍历数组中的内容，以对比的方式将较大值赋值进入Add变量，将每行的最大值取出来进行比较，取出最大值的最大值。</h3>
       </div>
       
         <div class="prev-or-next">
           <div class="post-foot-next">
             
-              <a href="/2021/11/25/Java%E7%AE%97%E6%B3%95%E4%B9%8B%E5%9C%86%E7%9A%84%E9%9D%A2%E7%A7%AF%E5%92%8C%E5%91%A8%E9%95%BF/" target="_self">
+              <a href="/2021/11/25/Java%E7%AE%97%E6%B3%95%E4%B9%8B%E6%B8%A9%E5%BA%A6%E8%BD%AC%E5%8C%96/" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
                 <span>Prev</span>
               </a>
@@ -173,15 +174,15 @@ MathJax = {
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime" title="Update time"></i>
-              2021-11-25 10:25:47
+              2021-12-01 10:16:52
             </span>
             
                   <span class="post-tags">
                     <i class="iconfont icon-tags" title="Tags"></i>
                     
                     <span class="span--tag">
-                      <a href="/tags/Java%E5%85%A5%E9%97%A8%E7%AE%97%E6%B3%95/" title="Java入门算法">
-                        <b>#</b> Java入门算法
+                      <a href="/tags/Java%E7%AE%97%E6%B3%95%E6%95%B0%E7%BB%84%E5%85%A5%E9%97%A8/" title="Java算法数组入门">
+                        <b>#</b> Java算法数组入门
                       </a>
                     </span>
                     
@@ -190,7 +191,7 @@ MathJax = {
           </div>
           <div class="post-foot-prev">
             
-              <a href="/2021/12/01/Java%E7%AE%97%E6%B3%95%E4%B9%8B%E6%95%B0%E7%BB%84%E6%B1%82%E6%9C%80%E5%A4%A7%E5%80%BC%E4%BD%8D%E7%BD%AE/" target="_self">
+              <a href="/2021/12/01/Java%E7%AE%97%E6%B3%95%E4%B9%8B%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E5%AF%84%E5%AD%98%E6%B1%82%E5%92%8C/" target="_self">
                 <span>Next</span>
                 <i class="iconfont icon-chevronright"></i>
               </a>
@@ -206,7 +207,7 @@ MathJax = {
   <div class="post-catalog hidden" id="catalog">
     <div class="title">Contents</div>
     <div class="catalog-content">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="toc-text">题目描述</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="toc-text">题目描述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="toc-text">解题思路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E5%BE%AA%E7%8E%AF%E5%85%88%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%8C%E4%BB%A5%E5%AF%B9%E6%AF%94%E7%9A%84%E6%96%B9%E5%BC%8F%E5%B0%86%E8%BE%83%E5%A4%A7%E5%80%BC%E8%B5%8B%E5%80%BC%E8%BF%9B%E5%85%A5Add%E5%8F%98%E9%87%8F%EF%BC%8C%E5%B0%86%E6%AF%8F%E8%A1%8C%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC%E5%8F%96%E5%87%BA%E6%9D%A5%E8%BF%9B%E8%A1%8C%E6%AF%94%E8%BE%83%EF%BC%8C%E5%8F%96%E5%87%BA%E6%9C%80%E5%A4%A7%E5%80%BC%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC%E3%80%82"><span class="toc-text">用循环先遍历数组中的内容，以对比的方式将较大值赋值进入Add变量，将每行的最大值取出来进行比较，取出最大值的最大值。</span></a></li></ol></li></ol></li></ol>
     </div>
   </div>
 
@@ -544,12 +545,12 @@ MathJax = {
       </a>
       <div class="share-content hidden">
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + Java%E7%AE%97%E6%B3%95%E4%B9%8B%E6%B8%A9%E5%BA%A6%E8%BD%AC%E5%8C%96 + '&url=' + http%3A%2F%2Fexample.com%2F2021%2F11%2F25%2FJava%25E7%25AE%2597%25E6%25B3%2595%25E4%25B9%258B%25E6%25B8%25A9%25E5%25BA%25A6%25E8%25BD%25AC%25E5%258C%2596%2F + '" target="_blank" title="Twitter">
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + Java%E7%AE%97%E6%B3%95%E4%B9%8B%E6%95%B0%E7%BB%84%E6%B1%82%E6%9C%80%E5%A4%A7%E5%80%BC%E4%BD%8D%E7%BD%AE + '&url=' + http%3A%2F%2Fexample.com%2F2021%2F12%2F01%2FJava%25E7%25AE%2597%25E6%25B3%2595%25E4%25B9%258B%25E6%2595%25B0%25E7%25BB%2584%25E6%25B1%2582%25E6%259C%2580%25E5%25A4%25A7%25E5%2580%25BC%25E4%25BD%258D%25E7%25BD%25AE%2F + '" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         
         
-          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2021/11/25/Java%E7%AE%97%E6%B3%95%E4%B9%8B%E6%B8%A9%E5%BA%A6%E8%BD%AC%E5%8C%96/" target="_blank" title="Facebook">
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2021/12/01/Java%E7%AE%97%E6%B3%95%E4%B9%8B%E6%95%B0%E7%BB%84%E6%B1%82%E6%9C%80%E5%A4%A7%E5%80%BC%E4%BD%8D%E7%BD%AE/" target="_blank" title="Facebook">
             <i class="iconfont icon-facebooksquare"></i>
           </a>
         
