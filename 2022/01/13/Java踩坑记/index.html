@@ -11,7 +11,7 @@
   
   <title>
     
-      Git基操记录 
+      Java踩坑记 
       
       
       |
@@ -130,61 +130,196 @@ MathJax = {
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">Git基操记录</div>
+      <div class="post-title">Java踩坑记</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime" title="Update time"></i>
-          2022-01-13 15:43:58
+          2022-01-13 16:32:54
         </span>
         
-              <span class="post-tags">
-                <i class="iconfont icon-tags" title="Tags"></i>
-                
-                <span class="span--tag">
-                  <a href="/tags/git/" title="git">
-                    <b>#</b> git
-                  </a>
-                </span>
-                
-              </span>
-          
       </div>
       <div class="markdown-body">
-        <h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>说多了都是泪，最近在整理Java的笔记，记笔记我比较喜欢使用markdown（当时使用Hexo的原因之一），毕竟作为刚入门槛一点点的程序小白，还没用上Idea（很多大佬都推荐这个），目前还在使用Visual Studio Code，主要是方便而且轻快，装了一个Git的插件，将Github上的库克隆到本地直接用Visual Studio Code写，为了图方便pull，就使用了Git的插件，结果写完一提交就error，没仔细看一想，可能电脑清理了没有设置git的user和email吧，习惯性的git config…，弄完之后再提交，timeout：443，想了想，没设置全局的代理，毕竟国内网络直通&gt;不了Github，又git config…了一波，终于success了</p>
-<h3 id="Git设置代理"><a href="#Git设置代理" class="headerlink" title="Git设置代理"></a>Git设置代理</h3><blockquote>
-<p>git config –global https.proxy <a target="_blank" rel="noopener" href="http://127.0.0.1:1080/">http://127.0.0.1:1080</a><br>git config –global https.proxy <a target="_blank" rel="noopener" href="https://127.0.0.1:1080/">https://127.0.0.1:1080</a><br>git config –global http.proxy socks5://127.0.0.1:1080<br>git config –global https.proxy socks5://127.0.0.1:1080</p>
+        <h1 id="Jvav踩坑记"><a href="#Jvav踩坑记" class="headerlink" title="Jvav踩坑记"></a>Jvav踩坑记</h1><hr>
+<h2 id="一-基础"><a href="#一-基础" class="headerlink" title="一.基础"></a>一.基础</h2><ol>
+<li><p>关键字与标识符，一般全小写的就是关键字</p>
+</li>
+<li><p>命名规则<code>硬性规范</code></p>
+<blockquote>
+<ul>
+<li>标识符包含<code>英文字母26个（区分大小写），0-9数字，$（美元符号）和_下划线</code></li>
+<li>标识符不能以数字开头</li>
+<li>标识符不能是关键字</li>
+</ul>
 </blockquote>
-<h3 id="Git设置账户"><a href="#Git设置账户" class="headerlink" title="Git设置账户"></a>Git设置账户</h3><blockquote>
-<p>git config –global user.name “username”<br>git config –global user.email “useremail”</p>
+</li>
+<li><p>命名规范 <code>软性建议</code></p>
+<blockquote>
+<ul>
+<li>类名规范：首字母大写，后面每个单词首字母大写（大驼峰式）</li>
+<li>变量名规范：首字母小写，后面每个单词首字母大写（小驼峰式）</li>
+<li>方法名规范：同变量名</li>
+</ul>
 </blockquote>
-<h3 id="配置密钥"><a href="#配置密钥" class="headerlink" title="配置密钥"></a>配置密钥</h3><blockquote>
-<p>ssh-keygen -t rsa -C “useremail”<br>接下来的操作参考Hexo搭建的相关过程</p>
+</li>
+<li><p>变量分类</p>
+<blockquote>
+<ul>
+<li>1.字符串常量</li>
+<li>2.整数常量</li>
+<li>3.浮点数常量</li>
+<li>4.字符常量</li>
+<li>5.布尔常量：true，false</li>
+<li>6.空常量：null</li>
+</ul>
 </blockquote>
-<h3 id="检测Git配置信息"><a href="#检测Git配置信息" class="headerlink" title="检测Git配置信息"></a>检测Git配置信息</h3><blockquote>
-<p>git config –list</p>
+</li>
+<li><p>基本格式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class DocuemtName &#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">    ......    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>两个单引号之间必须有且仅有一个字符，没有不行</p>
+</li>
+<li><p>单引号中不能有两个字符，只能有一个</p>
+</li>
+<li><p>空常量不能直接打印输出</p>
+</li>
+<li><p>在public变量名时候注意不能跨目录</p>
+</li>
+<li><p>点运算符（.）将一个对象同它的某一种方法连接起来<br><code> &#123;object.method(parameters)  //method&#125;</code></p>
+</li>
+<li><p>对象</p>
+<blockquote>
+<ul>
+<li>对象同时包括方法和字段（数据）</li>
+<li>类是任意数目的对象的说明</li>
+<li>创建一个对象，要将关键字new和类的名称连用 <code>new function</code></li>
+<li>调用一个对象的方法，要使用点运算符</li>
+</ul>
 </blockquote>
-<h3 id="克隆仓库"><a href="#克隆仓库" class="headerlink" title="克隆仓库"></a>克隆仓库</h3><blockquote>
-<p>git clone https://…….<br>git clone https://…….  已有仓库</p>
+</li>
+<li><p>java中所有函数都属于某个类的方法，因此java中的main方法必须有一个外壳类，也就是</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class welcome &#123;          //此处welcome为外壳类</span><br><span class="line">    public static void main(String[] args)</span><br><span class="line">    &#123;</span><br><span class="line">        ......</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>java中的main方法必须是静态的</p>
+</li>
+<li><p>需要程序结束之后运行其他内容的时候需要用到 <code>System.exit</code></p>
+</li>
+<li><p><code>System.out.println()</code>输出之后默认换行,而<code>System.out.print()</code>输出默认不换行，输出还是跟在后面</p>
+</li>
+</ol>
+<hr>
+<h2 id="二-数据类型-整形"><a href="#二-数据类型-整形" class="headerlink" title="二.数据类型.整形"></a>二.数据类型.整形</h2><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>存储需求</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>int</td>
+<td>4 bit</td>
+<td>-2147483648~2147483647</td>
+</tr>
+<tr>
+<td>short</td>
+<td>2 bit</td>
+<td>-32768~32767</td>
+</tr>
+<tr>
+<td>long</td>
+<td>8 bit</td>
+<td>-9223372036854775808~9223372036854775807</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>1 bit</td>
+<td>-128~127</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>存储需求</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>float</td>
+<td>4 bit</td>
+<td>±3.40282347E+38F(有效位数为6~7)</td>
+</tr>
+<tr>
+<td>double</td>
+<td>8 bit</td>
+<td>±1.79769313486231570E+308(有效位数为15位)</td>
+</tr>
+<tr>
+<td>.用于表示出错的三个浮点数字</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<blockquote>
+<ul>
+<li>正无穷大</li>
+<li>负无穷大</li>
+<li>NaN(不是一个数字)</li>
+<li>Math.sin</li>
+<li>Math.cos</li>
+<li>Math.tan</li>
+<li>Math.atan</li>
+<li>Math.atan2</li>
+<li>Math.exp</li>
+<li>Math.log</li>
+<li>Math.log10</li>
+<li>Math.PI</li>
+<li>Math.E</li>
+</ul>
 </blockquote>
-<h3 id="检测文件状态"><a href="#检测文件状态" class="headerlink" title="检测文件状态"></a>检测文件状态</h3><blockquote>
-<p>git status</p>
-</blockquote>
-<h3 id="提交更改"><a href="#提交更改" class="headerlink" title="提交更改"></a>提交更改</h3><blockquote>
-<p>git commit -m “Input commt message”</p>
-</blockquote>
-<h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><blockquote>
-<p>git rm  &lt; file name&gt;</p>
-</blockquote>
-<h3 id="查看历史记录"><a href="#查看历史记录" class="headerlink" title="查看历史记录"></a>查看历史记录</h3><blockquote>
-<p>git log</p>
-</blockquote>
+<ol>
+<li>在使用Math函数的时候需要在顶部添加<code>import static java.lang.Math.*</code><br>.对浮点数进行射入运算以便于得到最接近的整数，使用Math.round（注意在对数值直接进行强制转化的时候并不会自动四舍五入）<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class Qzlxzh&#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        double x = 9.8127381367;</span><br><span class="line">        int nx = (int) Math.round(x);</span><br><span class="line">        System.out.print(nx);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;           //在这里由于x值接近9，使用Math.round取值进行int强制类型转化得到10</span><br></pre></td></tr></table></figure></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public class Qzlxzh&#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        double x = 9.8127381367;</span><br><span class="line">        int nx = (int) x;</span><br><span class="line">        System.out.print(nx);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;           //直接强制类型转化的时候得到值9</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
+<blockquote>
+<p>++n 表示在运行的时候先自增再运算<br>n++ 表示在运行时先运算再自增<br> 不能使用Java保留字作为变量名<br> 声明变量之后必须要初始化变量方可使用，否则在C++，Java中均会报错<br>2. C++区分变量的声明和定义 但是Java中不区分</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int i = 10;     //这是一个定义</span><br><span class="line">extern int i = 10;      //这是一个声明</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>final关键字表示这个常量只能被赋值一次，常量名使用全大写</li>
+</ol>
+<hr>
+<h2 id="三-类与对象"><a href="#三-类与对象" class="headerlink" title="三.类与对象"></a>三.类与对象</h2><p>. 对象与类是Java中面向对象的两个最基本概念，一个类可以有多个对象<br>. 类有两大成员：属性与方法<br>. 类名需要符合Java标识符的命名规范<br>. Java中允许多个类出现在同一个源文件中，但最多只能有一个类是public的，如果有一个public类，那么源文件必须与类名保持相同</p>
+<ol>
+<li><code>修饰符 + 类型 + 变量名</code>来定义一个类</li>
+</ol>
+<h2 id="四-数组"><a href="#四-数组" class="headerlink" title="四.数组"></a>四.数组</h2><ol start="2">
+<li><p>数组也是数据结构的一种，用来存储同一类型值的集合，通过下标可以访问数组中的元素。</p>
+</li>
+<li><p>声明数组变量时需要指出数组类型（数据元素类型紧跟[]和数组变量的名字）</p>
+</li>
+</ol>
+<p>使用<code>new</code>运算符进行数组创建</p>
+<ol start="4">
+<li><p>创建完一个数组并且没有附任何初值的时候那么数组中所有的元素都会初始化为0，而boolean数组的值会初始化为false，对象数组的元素会初始化为特殊值null</p>
+</li>
+<li><p>一旦创建数组就不能改变它的大小，如果经常需要更改的话参考<code>数组列表（array list）</code></p>
+</li>
+<li><p>增强for循环<code>for each</code>,语法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(variable : collection) statement</span><br></pre></td></tr></table></figure></li>
+<li><p>初始化数组给值的时候可以不调用 new ，可以初始化一个<font color = red>匿名数组 </font>：<code>n = new int[] &#123;1,2,3,4,5&#125;</code> 这样创建的数组会利用括号中提供的值进行初始化，数组大小就是初始值的个数</p>
+</li>
+<li><p>可以使用<code>=</code>将一个数组变量拷贝给另一个数组变量（非数组本身），这时两个变量引用的是同一个数组</p>
+</li>
+<li><p>如果想要拷贝数组本体（也就是数组所有值）到一个新的数组中去的话就要使用<code>Arrays类的copyOf方法</code>，语法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] copiedLuckyNumbers = Arrays.copyOf(luckyNumbers, luckyNumbers.length) <span class="comment">//其中luckyNumbers.length代表所创建的新的数组的大小，通常可以使用这个方法来增加数组的大小，多余的值会被进行默认赋值</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="命令行参数"><a href="#命令行参数" class="headerlink" title="命令行参数"></a>命令行参数</h3>
       </div>
       
         <div class="prev-or-next">
           <div class="post-foot-next">
             
-              <a href="/2021/12/04/%E5%85%B3%E4%BA%8E%E5%8D%9A%E4%B8%BB%E8%AE%BE%E5%A4%87%E9%85%8D%E7%BD%AE/" target="_self">
+              <a href="/2022/01/13/Git%E5%9F%BA%E6%93%8D%E8%AE%B0%E5%BD%95/" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
                 <span>Prev</span>
               </a>
@@ -193,27 +328,11 @@ MathJax = {
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime" title="Update time"></i>
-              2022-01-13 15:43:58
+              2022-01-13 16:32:54
             </span>
             
-                  <span class="post-tags">
-                    <i class="iconfont icon-tags" title="Tags"></i>
-                    
-                    <span class="span--tag">
-                      <a href="/tags/git/" title="git">
-                        <b>#</b> git
-                      </a>
-                    </span>
-                    
-                  </span>
-              
           </div>
           <div class="post-foot-prev">
-            
-              <a href="/2022/01/13/Java%E8%B8%A9%E5%9D%91%E8%AE%B0/" target="_self">
-                <span>Next</span>
-                <i class="iconfont icon-chevronright"></i>
-              </a>
             
           </div>
         </div>
@@ -226,7 +345,7 @@ MathJax = {
   <div class="post-catalog hidden" id="catalog">
     <div class="title">Contents</div>
     <div class="catalog-content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-text">小结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86"><span class="toc-text">Git设置代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git%E8%AE%BE%E7%BD%AE%E8%B4%A6%E6%88%B7"><span class="toc-text">Git设置账户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%AF%86%E9%92%A5"><span class="toc-text">配置密钥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A3%80%E6%B5%8BGit%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF"><span class="toc-text">检测Git配置信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%8B%E9%9A%86%E4%BB%93%E5%BA%93"><span class="toc-text">克隆仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A3%80%E6%B5%8B%E6%96%87%E4%BB%B6%E7%8A%B6%E6%80%81"><span class="toc-text">检测文件状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%90%E4%BA%A4%E6%9B%B4%E6%94%B9"><span class="toc-text">提交更改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6"><span class="toc-text">删除文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95"><span class="toc-text">查看历史记录</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Jvav%E8%B8%A9%E5%9D%91%E8%AE%B0"><span class="toc-text">Jvav踩坑记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E5%9F%BA%E7%A1%80"><span class="toc-text">一.基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E6%95%B4%E5%BD%A2"><span class="toc-text">二.数据类型.整形</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1"><span class="toc-text">三.类与对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B-%E6%95%B0%E7%BB%84"><span class="toc-text">四.数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0"><span class="toc-text">命令行参数</span></a></li></ol></li></ol></li></ol>
     </div>
   </div>
 
@@ -564,12 +683,12 @@ MathJax = {
       </a>
       <div class="share-content hidden">
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + Git%E5%9F%BA%E6%93%8D%E8%AE%B0%E5%BD%95 + '&url=' + http%3A%2F%2Fexample.com%2F2022%2F01%2F13%2FGit%25E5%259F%25BA%25E6%2593%258D%25E8%25AE%25B0%25E5%25BD%2595%2F + '" target="_blank" title="Twitter">
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + Java%E8%B8%A9%E5%9D%91%E8%AE%B0 + '&url=' + http%3A%2F%2Fexample.com%2F2022%2F01%2F13%2FJava%25E8%25B8%25A9%25E5%259D%2591%25E8%25AE%25B0%2F + '" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         
         
-          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2022/01/13/Git%E5%9F%BA%E6%93%8D%E8%AE%B0%E5%BD%95/" target="_blank" title="Facebook">
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2022/01/13/Java%E8%B8%A9%E5%9D%91%E8%AE%B0/" target="_blank" title="Facebook">
             <i class="iconfont icon-facebooksquare"></i>
           </a>
         
