@@ -11,11 +11,6 @@
   
   <title>
     
-      Java踩坑记 
-      
-      
-      |
-    
      The blog for Bztiks
   </title>
 
@@ -130,11 +125,11 @@ MathJax = {
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">Java踩坑记</div>
+      <div class="post-title"></div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime" title="Update time"></i>
-          2022-01-13 16:32:54
+          2022-01-13 16:38:19
         </span>
         
       </div>
@@ -290,11 +285,19 @@ MathJax = {
 <li>final关键字表示这个常量只能被赋值一次，常量名使用全大写</li>
 </ol>
 <hr>
-<h2 id="三-类与对象"><a href="#三-类与对象" class="headerlink" title="三.类与对象"></a>三.类与对象</h2><p>. 对象与类是Java中面向对象的两个最基本概念，一个类可以有多个对象<br>. 类有两大成员：属性与方法<br>. 类名需要符合Java标识符的命名规范<br>. Java中允许多个类出现在同一个源文件中，但最多只能有一个类是public的，如果有一个public类，那么源文件必须与类名保持相同</p>
-<ol>
-<li><code>修饰符 + 类型 + 变量名</code>来定义一个类</li>
+<h2 id="三-类与对象"><a href="#三-类与对象" class="headerlink" title="三.类与对象"></a>三.类与对象</h2><ol>
+<li><p>对象与类是Java中面向对象的两个最基本概念，一个类可以有多个对象</p>
+</li>
+<li><p>类有两大成员：属性与方法</p>
+</li>
+<li><p>类名需要符合Java标识符的命名规范</p>
+</li>
+<li><p>Java中允许多个类出现在同一个源文件中，但最多只能有一个类是public的，如果有一个public类，那么源文件必须与类名保持相同</p>
+</li>
+<li><p><code>修饰符 + 类型 + 变量名</code>来定义一个类</p>
+</li>
 </ol>
-<h2 id="四-数组"><a href="#四-数组" class="headerlink" title="四.数组"></a>四.数组</h2><ol start="2">
+<h2 id="四-数组"><a href="#四-数组" class="headerlink" title="四.数组"></a>四.数组</h2><ol>
 <li><p>数组也是数据结构的一种，用来存储同一类型值的集合，通过下标可以访问数组中的元素。</p>
 </li>
 <li><p>声明数组变量时需要指出数组类型（数据元素类型紧跟[]和数组变量的名字）,使用<code>new</code>运算符进行数组创建</p>
@@ -311,8 +314,10 @@ MathJax = {
 </li>
 <li><p>如果想要拷贝数组本体（也就是数组所有值）到一个新的数组中去的话就要使用<code>Arrays类的copyOf方法</code>，语法：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] copiedLuckyNumbers = Arrays.copyOf(luckyNumbers, luckyNumbers.length) <span class="comment">//其中luckyNumbers.length代表所创建的新的数组的大小，通常可以使用这个方法来增加数组的大小，多余的值会被进行默认赋值</span></span><br></pre></td></tr></table></figure></li>
+<li><p>命令行参数</p>
+</li>
 </ol>
-<h3 id="命令行参数"><a href="#命令行参数" class="headerlink" title="命令行参数"></a>命令行参数</h3>
+
       </div>
       
         <div class="prev-or-next">
@@ -327,7 +332,7 @@ MathJax = {
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime" title="Update time"></i>
-              2022-01-13 16:32:54
+              2022-01-13 16:38:19
             </span>
             
           </div>
@@ -344,7 +349,7 @@ MathJax = {
   <div class="post-catalog hidden" id="catalog">
     <div class="title">Contents</div>
     <div class="catalog-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E5%9F%BA%E7%A1%80"><span class="toc-text">一.基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">二.数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1"><span class="toc-text">三.类与对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B-%E6%95%B0%E7%BB%84"><span class="toc-text">四.数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0"><span class="toc-text">命令行参数</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E5%9F%BA%E7%A1%80"><span class="toc-text">一.基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">二.数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1"><span class="toc-text">三.类与对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B-%E6%95%B0%E7%BB%84"><span class="toc-text">四.数组</span></a></li></ol>
     </div>
   </div>
 
@@ -682,7 +687,7 @@ MathJax = {
       </a>
       <div class="share-content hidden">
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + Java%E8%B8%A9%E5%9D%91%E8%AE%B0 + '&url=' + http%3A%2F%2Fexample.com%2F2022%2F01%2F13%2FJava%25E8%25B8%25A9%25E5%259D%2591%25E8%25AE%25B0%2F + '" target="_blank" title="Twitter">
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' +  + '&url=' + http%3A%2F%2Fexample.com%2F2022%2F01%2F13%2FJava%25E8%25B8%25A9%25E5%259D%2591%25E8%25AE%25B0%2F + '" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         
