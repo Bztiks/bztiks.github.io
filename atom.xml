@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-12-04T08:35:09.566Z</updated>
+  <updated>2022-01-13T08:04:21.875Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git基操记录</title>
+    <link href="http://example.com/2022/01/13/Git%E5%9F%BA%E6%93%8D%E8%AE%B0%E5%BD%95/"/>
+    <id>http://example.com/2022/01/13/Git%E5%9F%BA%E6%93%8D%E8%AE%B0%E5%BD%95/</id>
+    <published>2022-01-13T07:43:58.000Z</published>
+    <updated>2022-01-13T08:04:21.875Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>说多了都是泪，最近在整理Java的笔记，记笔记我比较喜欢使用markdown（当时使用Hexo的原因之一），毕竟作为刚入门槛一点点的程序小白，还没用上Idea（很多大佬都推荐这个），目前还在使用Visual Studio Code，主要是方便而且轻快，装了一个Git的插件，将Github上的库克隆到本地直接用Visual Studio Code写，为了图方便pull，就使用了Git的插件，结果写完一提交就error，没仔细看一想，可能电脑清理了没有设置git的user和email吧，习惯性的git config…，弄完之后再提交，timeout：443，想了想，没设置全局的代理，毕竟国内网络直通&gt;不了Github，又git config…了一波，终于success了</p><h3 id="Git设置代理"><a href="#Git设置代理" class="headerlink" title="Git设置代理"></a>Git设置代理</h3><blockquote></blockquote><p>git config –global https.proxy <a href="http://127.0.0.1:1080/">http://127.0.0.1:1080</a><br>git config –global https.proxy <a href="https://127.0.0.1:1080/">https://127.0.0.1:1080</a><br>git config –global http.proxy socks5://127.0.0.1:1080<br>git config –global https.proxy socks5://127.0.0.1:1080</p><h3 id="Git设置账户"><a href="#Git设置账户" class="headerlink" title="Git设置账户"></a>Git设置账户</h3><blockquote></blockquote><p>git config –global user.name “username”<br>git config –global user.email “useremail”</p><h3 id="配置密钥"><a href="#配置密钥" class="headerlink" title="配置密钥"></a>配置密钥</h3><blockquote></blockquote><p>ssh-keygen -t rsa -C “useremail”<br>接下来的操作参考Hexo搭建的相关过程</p><h3 id="检测Git配置信息"><a href="#检测Git配置信息" class="headerlink" title="检测Git配置信息"></a>检测Git配置信息</h3><blockquote></blockquote><p>git config –list</p><h3 id="克隆仓库"><a href="#克隆仓库" class="headerlink" title="克隆仓库"></a>克隆仓库</h3><blockquote></blockquote><p>git clone https://…….<br>git clone https://…….  已有仓库</p><h3 id="检测文件状态"><a href="#检测文件状态" class="headerlink" title="检测文件状态"></a>检测文件状态</h3><blockquote></blockquote><p>git status</p><h3 id="提交更改"><a href="#提交更改" class="headerlink" title="提交更改"></a>提交更改</h3><blockquote></blockquote><p>git commit -m “Input commt message”</p><h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><blockquote></blockquote><p>git rm  &lt; file name&gt;</p><h3 id="查看历史记录"><a href="#查看历史记录" class="headerlink" title="查看历史记录"></a>查看历史记录</h3><blockquote></blockquote><p>git log</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;小结&quot;&gt;&lt;a href=&quot;#小结&quot; class=&quot;headerlink&quot; title=&quot;小结&quot;&gt;&lt;/a&gt;小结&lt;/h3&gt;&lt;p&gt;说多了都是泪，最近在整理Java的笔记，记笔记我比较喜欢使用markdown（当时使用Hexo的原因之一），毕竟作为刚入门槛一点点的程序小白</summary>
+      
+    
+    
+    
+    
+    <category term="git" scheme="http://example.com/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>Demo</title>
