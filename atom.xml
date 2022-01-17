@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-01-13T08:05:54.784Z</updated>
+  <updated>2022-01-17T03:23:52.448Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>禁用显卡自动更新</title>
+    <link href="http://example.com/2022/01/17/%E7%A6%81%E7%94%A8%E6%98%BE%E5%8D%A1%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0/"/>
+    <id>http://example.com/2022/01/17/%E7%A6%81%E7%94%A8%E6%98%BE%E5%8D%A1%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0/</id>
+    <published>2022-01-17T03:03:34.000Z</published>
+    <updated>2022-01-17T03:23:52.448Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>有一天打开MC（我的世界）时候突然显示显卡不支持，想了想可能是自己捣鼓电脑的时候弄坏了，提示说版本不支持，一看自己的驱动还是上古版本，但是之前都是可以正常玩的，想着更新下驱动就行了呗，更新完“error”报了一堆错，网上搜了搜，很多人说是OpenGL的问题，下载了个OpenGL修复工具修复了下，打开一检测，好家伙，除了OpenGL1.0是绿色其他都是红色，自己又捣鼓了一会发现卸掉官方的驱动之后显卡还是可以正常运转，而且报错全都没了</p><p>直到今天早上突然又报错了，一看AMD Radeom Software直接报错了，卸掉无意看了眼Windows Update，发现在更新什么Display，突然知道为啥了，Windows Update自动更新的驱动更新完之后设备管理器显示的是具体型号，而官方的驱动更新之后显示的系列号，Windows Update在自动更新的时候会下载默认的驱动，导致和官方的冲突，那么如何在正常更新Windows的情况下禁用默认的显卡更新呢</p><h3 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h3><p>打开设备管理器，找到显示适配器中对应的显卡，右击选择属性，查看详细信息，找到属性（类 Guid）获取值，将值复制下来<br><img src="1.png"><br>打开组策略，win+r输入gpedit.msc<br><img src="2.png"><br>找到管理模板–&gt;系统–&gt;设备安装–&gt;阻止使用与下列设备安装….<br><img src="3.png"><br><img src="4.png"><br>将复制下来的ID输进去，确定<br><img src="5.png"><br>再打开cmd，输入<code>gpupdate</code>进行策略更新<br><img src="6.png"><br>这时候Windows Update就不会去自动更新显卡了</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>奇怪的知识增加了</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;起因&quot;&gt;&lt;a href=&quot;#起因&quot; class=&quot;headerlink&quot; title=&quot;起因&quot;&gt;&lt;/a&gt;起因&lt;/h3&gt;&lt;p&gt;有一天打开MC（我的世界）时候突然显示显卡不支持，想了想可能是自己捣鼓电脑的时候弄坏了，提示说版本不支持，一看自己的驱动还是上古版本，但是之</summary>
+      
+    
+    
+    
+    
+    <category term="小知识" scheme="http://example.com/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
   
   <entry>
     <title>Git基操记录</title>
