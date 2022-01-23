@@ -11,11 +11,6 @@
   
   <title>
     
-      Java踩坑记 
-      
-      
-      |
-    
      The blog for Bztiks
   </title>
 
@@ -130,24 +125,13 @@ MathJax = {
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">Java踩坑记</div>
+      <div class="post-title"></div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime" title="Update time"></i>
-          2022-01-13 14:21:54
+          2022-01-13 16:50:19
         </span>
         
-              <span class="post-tags">
-                <i class="iconfont icon-tags" title="Tags"></i>
-                
-                <span class="span--tag">
-                  <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="学习笔记">
-                    <b>#</b> 学习笔记
-                  </a>
-                </span>
-                
-              </span>
-          
       </div>
       <div class="markdown-body">
         <h2 id="一-基础"><a href="#一-基础" class="headerlink" title="一.基础"></a>一.基础</h2><ol>
@@ -262,6 +246,11 @@ MathJax = {
 <td>8 bit</td>
 <td>±1.79769313486231570E+308(有效位数为15位)</td>
 </tr>
+<tr>
+<td>.用于表示出错的三个浮点数字</td>
+<td></td>
+<td></td>
+</tr>
 </tbody></table>
 <blockquote>
 <ul>
@@ -325,16 +314,17 @@ MathJax = {
 </li>
 <li><p>如果想要拷贝数组本体（也就是数组所有值）到一个新的数组中去的话就要使用<code>Arrays类的copyOf方法</code>，语法：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] copiedLuckyNumbers = Arrays.copyOf(luckyNumbers, luckyNumbers.length) <span class="comment">//其中luckyNumbers.length代表所创建的新的数组的大小，通常可以使用这个方法来增加数组的大小，多余的值会被进行默认赋值</span></span><br></pre></td></tr></table></figure></li>
-<li><p>命令行参数</p>
-</li>
+<li><p>命令行参数<br>每一个Java程序都带一个String arg[]参数的main方法，这个参数是可以接收一个字符串数组，也就是命令行参数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Message</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(args.length == <span class="number">0</span> || args[<span class="number">0</span>].equals(<span class="string">&quot;-h&quot;</span>))</span><br><span class="line">            System.out.print(<span class="string">&quot;Hello,&quot;</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(args[<span class="number">0</span>].equals(<span class="string">&quot;-g&quot;</span>))</span><br><span class="line">            System.out.print(<span class="string">&quot;Goodbye,&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; args.length; i++)</span><br><span class="line">            System.out.print(<span class="string">&quot; &quot;</span> + args[i]);</span><br><span class="line">        System.out.println(<span class="string">&quot;!&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
+<p><img src="1.png" alt="命令行参数"></p>
 
       </div>
       
         <div class="prev-or-next">
           <div class="post-foot-next">
             
-              <a href="/2021/12/04/%E5%85%B3%E4%BA%8E%E5%8D%9A%E4%B8%BB%E8%AE%BE%E5%A4%87%E9%85%8D%E7%BD%AE/" target="_self">
+              <a href="/2022/01/13/Git%E5%9F%BA%E6%93%8D%E8%AE%B0%E5%BD%95/" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
                 <span>Prev</span>
               </a>
@@ -343,24 +333,13 @@ MathJax = {
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime" title="Update time"></i>
-              2022-01-13 14:21:54
+              2022-01-13 16:50:19
             </span>
             
-                  <span class="post-tags">
-                    <i class="iconfont icon-tags" title="Tags"></i>
-                    
-                    <span class="span--tag">
-                      <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="学习笔记">
-                        <b>#</b> 学习笔记
-                      </a>
-                    </span>
-                    
-                  </span>
-              
           </div>
           <div class="post-foot-prev">
             
-              <a href="/2022/01/13/Git%E5%9F%BA%E6%93%8D%E8%AE%B0%E5%BD%95/" target="_self">
+              <a href="/2022/01/17/%E7%A6%81%E7%94%A8%E6%98%BE%E5%8D%A1%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0/" target="_self">
                 <span>Next</span>
                 <i class="iconfont icon-chevronright"></i>
               </a>
@@ -714,7 +693,7 @@ MathJax = {
       </a>
       <div class="share-content hidden">
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + Java%E8%B8%A9%E5%9D%91%E8%AE%B0 + '&url=' + http%3A%2F%2Fexample.com%2F2022%2F01%2F13%2FJava%25E8%25B8%25A9%25E5%259D%2591%25E8%25AE%25B0%2F + '" target="_blank" title="Twitter">
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' +  + '&url=' + http%3A%2F%2Fexample.com%2F2022%2F01%2F13%2FJava%25E8%25B8%25A9%25E5%259D%2591%25E8%25AE%25B0%2F + '" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         
