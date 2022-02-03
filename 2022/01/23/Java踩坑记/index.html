@@ -312,7 +312,39 @@ MathJax = {
 </li>
 <li><p><code>修饰符 + 类型 + 变量名</code>来定义一个类</p>
 </li>
+<li><p>类是构造对象的模板</p>
+</li>
+<li><p>对象中的数据称为实例域，操作数据的过程称为方法</p>
+</li>
+<li><p>每个对象都有一组特定的实例域值，这些值的集合就是这个对象的当前状态</p>
+</li>
+<li><p>封装，给对象赋予了黑盒的特征，提高重利用性与可靠性</p>
+</li>
+<li><p>类之间常见的三种关系：依赖（耦合），聚合，继承</p>
+</li>
+<li><p>在Java中任何对象变量的值都是对存储在另一个地方的一个对象的引用</p>
+</li>
+<li><p>一个对象变量并没有实际包含一个对象，而仅仅引用一个对象</p>
+</li>
+<li><p>不可将方法用于一个值为null的对象上</p>
+</li>
+<li><p>局部变量不会自动的初始化为null，需要用new或者将其设置为null进行初始化</p>
+</li>
+<li><p>关键字<font color = red>this</font>表示隐式参数</p>
+</li>
+<li><p>实例域<font color = red>final</font>大都应用于基本类型域或不可变类域</p>
+</li>
+<li><p><code>setOut</code> 方法是一个本地方法，本地方法可以绕过Java语言的存储控制机制</p>
+</li>
+<li><p>静态方法是不可向对象实施操作的方法，可以认为静态方法是没有<font color = red>this</font>参数的方法</p>
+</li>
+<li><p>使用静态方法的两种情况</p>
+</li>
 </ol>
+<ul>
+<li>一个方法不需要访问对象状态，其所需的参数都是通过显式参数提供</li>
+<li>一个方法只需要访问类的静态域</li>
+</ul>
 <h2 id="四-数组"><a href="#四-数组" class="headerlink" title="四.数组"></a>四.数组</h2><ol>
 <li><p>数组也是数据结构的一种，用来存储同一类型值的集合，通过下标可以访问数组中的元素。</p>
 </li>
@@ -334,6 +366,12 @@ MathJax = {
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Message</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(args.length == <span class="number">0</span> || args[<span class="number">0</span>].equals(<span class="string">&quot;-h&quot;</span>))</span><br><span class="line">            System.out.print(<span class="string">&quot;Hello,&quot;</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(args[<span class="number">0</span>].equals(<span class="string">&quot;-g&quot;</span>))</span><br><span class="line">            System.out.print(<span class="string">&quot;Goodbye,&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; args.length; i++)</span><br><span class="line">            System.out.print(<span class="string">&quot; &quot;</span> + args[i]);</span><br><span class="line">        System.out.println(<span class="string">&quot;!&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
 <p><img src="1.png" alt="命令行参数"></p>
+<ol start="10">
+<li>多维数组初始化<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">balances = <span class="keyword">new</span> <span class="keyword">double</span>[NYEARS][NRATES] </span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>知道数组元素时可不调用new，直接简化书写形式对多维数组进行初始化</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[][] name = </span><br><span class="line">&#123;</span><br><span class="line">    &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 
       </div>
       
