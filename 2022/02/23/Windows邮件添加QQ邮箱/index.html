@@ -8,10 +8,13 @@
   <meta name="author" content="John Doe" />
   <meta name="description" content="" />
   
-    <meta name="robots" content="noindex" />
-  
   
   <title>
+    
+      Windows邮件添加QQ邮箱 
+      
+      
+      |
     
      The blog for Bztiks
   </title>
@@ -99,45 +102,121 @@
 
 
       <div class="flex-container">
-        <div class="container index">
-  <div class="post-list">
-    <!-- 遍历渲染文章 -->
-    
-      <div class="post-item" title="关于搭建此网站教程">
-        <div class="time-m-d">2021-11-05</div>
-        <div class="title">
-          <a href="/2021/11/05/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BA%E6%AD%A4%E7%BD%91%E7%AB%99%E6%95%99%E7%A8%8B/">
-            
-              
-                <span>关于搭建此网站教程</span>
-              
-            
-          </a>
-        </div>
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">Windows邮件添加QQ邮箱</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime" title="Update time"></i>
+          2022-02-23 08:48:12
+        </span>
+        
       </div>
-    
-      <div class="post-item" title="Inspiration">
-        <div class="time-m-d">2021-11-04</div>
-        <div class="title">
-          <a href="/2021/11/04/Inspiration/">
+      <div class="markdown-body">
+        <h2 id="前序"><a href="#前序" class="headerlink" title="前序"></a>前序</h2><p>前段时间折腾黑苹果发现macOS生态下的邮件管理集中方便，看向Windows的邮件除了账户自带的outlook的邮件可以接收之外，想着可以把所有的邮件账户都集中到一起</p>
+<h2 id="实施"><a href="#实施" class="headerlink" title="实施"></a>实施</h2><p>这里主要就是把QQ的邮件都给整合到Windows下的邮件中，打开Windows自带的邮件，查看账户<br><img src="1.png"><br>选择添加账户，选择其他账户<br><img src="2.png"><br>到这里为止，可以把邮件放一边了，打开浏览器访问QQ邮箱，找到设置-&gt;账户-&gt;POP3…..服务，将框中前两个服务打开，然后可以获取一串授权码<br><img src="3.png"><br><img src="4.png"><br>回到Windows的邮件应用中，在电子邮箱地址栏填自己的邮箱地址，<font color = red>密码栏填写获取到的授权码</font><br><img src="5.png"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>把邮件都统一管理会很方便，每天早上打开电脑就能知道有什么事情发生，不会错过会议活动</p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
             
-              
-                <span>Inspiration</span>
-              
+              <a href="/2022/01/23/Java%E8%B8%A9%E5%9D%91%E8%AE%B0/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
             
-          </a>
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime" title="Update time"></i>
+              2022-02-23 08:48:12
+            </span>
+            
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
         </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">Contents</div>
+    <div class="catalog-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E5%BA%8F"><span class="toc-text">前序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E6%96%BD"><span class="toc-text">实施</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
+    
+      <div class="comments-container">
+        
+
+
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+  <div id="vcomments"></div>
+
+  <script>
+    new Valine({
+      el: '#vcomments',
+      appId: 'Eh94Br4L99dLsJqbMwx5cGT6-gzGzoHsz',
+      appKey: 'XNjC7RBsVKQ5cw1w9GPtFt9s',
+      placeholder: 'Welcome!',
+      avatar: 'retro',
+      lang: 'en'
+    })
+  </script>
+
+    <style>
+      .comments-container .v .vempty {
+        display: none!important;
+      }
+    </style>
+
+
+
+
       </div>
     
   </div>
-  <nav class="post-navigation">
-    
-      <a href="/"><i class="iconfont icon-angleleft"></i></a>
-    
-    <span class="page-num">2 / 2</span>
-    
-  </nav>
-</div>
+
 
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
@@ -426,6 +505,24 @@
 
 
         
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + Windows%E9%82%AE%E4%BB%B6%E6%B7%BB%E5%8A%A0QQ%E9%82%AE%E7%AE%B1 + '&url=' + http%3A%2F%2Fexample.com%2F2022%2F02%2F23%2FWindows%25E9%2582%25AE%25E4%25BB%25B6%25E6%25B7%25BB%25E5%258A%25A0QQ%25E9%2582%25AE%25E7%25AE%25B1%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2022/02/23/Windows%E9%82%AE%E4%BB%B6%E6%B7%BB%E5%8A%A0QQ%E9%82%AE%E7%AE%B1/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
   
 <script src="/js/shares.js"></script>

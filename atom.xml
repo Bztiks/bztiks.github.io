@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-02-03T08:02:03.000Z</updated>
+  <updated>2022-02-23T00:48:41.290Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows邮件添加QQ邮箱</title>
+    <link href="http://example.com/2022/02/23/Windows%E9%82%AE%E4%BB%B6%E6%B7%BB%E5%8A%A0QQ%E9%82%AE%E7%AE%B1/"/>
+    <id>http://example.com/2022/02/23/Windows%E9%82%AE%E4%BB%B6%E6%B7%BB%E5%8A%A0QQ%E9%82%AE%E7%AE%B1/</id>
+    <published>2022-02-23T00:48:12.000Z</published>
+    <updated>2022-02-23T00:48:41.290Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前序"><a href="#前序" class="headerlink" title="前序"></a>前序</h2><p>前段时间折腾黑苹果发现macOS生态下的邮件管理集中方便，看向Windows的邮件除了账户自带的outlook的邮件可以接收之外，想着可以把所有的邮件账户都集中到一起</p><h2 id="实施"><a href="#实施" class="headerlink" title="实施"></a>实施</h2><p>这里主要就是把QQ的邮件都给整合到Windows下的邮件中，打开Windows自带的邮件，查看账户<br><img src="1.png"><br>选择添加账户，选择其他账户<br><img src="2.png"><br>到这里为止，可以把邮件放一边了，打开浏览器访问QQ邮箱，找到设置-&gt;账户-&gt;POP3…..服务，将框中前两个服务打开，然后可以获取一串授权码<br><img src="3.png"><br><img src="4.png"><br>回到Windows的邮件应用中，在电子邮箱地址栏填自己的邮箱地址，<font color = red>密码栏填写获取到的授权码</font><br><img src="5.png"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>把邮件都统一管理会很方便，每天早上打开电脑就能知道有什么事情发生，不会错过会议活动</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;前序&quot;&gt;&lt;a href=&quot;#前序&quot; class=&quot;headerlink&quot; title=&quot;前序&quot;&gt;&lt;/a&gt;前序&lt;/h2&gt;&lt;p&gt;前段时间折腾黑苹果发现macOS生态下的邮件管理集中方便，看向Windows的邮件除了账户自带的outlook的邮件可以接收之外，想着可以把</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Java踩坑记</title>
