@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-02-24T01:10:29.541Z</updated>
+  <updated>2022-04-28T02:24:58.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>npm安装hexo报错</title>
+    <link href="http://example.com/2022/04/28/npm%E5%AE%89%E8%A3%85hexo%E6%8A%A5%E9%94%99/"/>
+    <id>http://example.com/2022/04/28/npm%E5%AE%89%E8%A3%85hexo%E6%8A%A5%E9%94%99/</id>
+    <published>2022-04-28T02:20:16.000Z</published>
+    <updated>2022-04-28T02:24:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="报错提示"><a href="#报错提示" class="headerlink" title="报错提示"></a>报错提示</h3><p>npm WARN saveError ENOENT: no such file or directory, open ‘/home/linux1/package.json’<br>npm notice created a lockfile as package-lock.json. You should commit this file.<br>npm WARN notsup Unsupported engine for <a href="mailto:&#x68;&#x65;&#120;&#111;&#45;&#x75;&#116;&#105;&#108;&#64;&#50;&#46;&#54;&#x2e;&#x30;">&#x68;&#x65;&#120;&#111;&#45;&#x75;&#116;&#105;&#108;&#64;&#50;&#46;&#54;&#x2e;&#x30;</a>: wanted: {“node”:”&gt;=12.4.0”} (current: {“node”:”10.19.0”,”npm”:”6.14.4”})<br>npm WARN notsup Not compatible with your version of node/npm: <a href="mailto:&#104;&#101;&#120;&#111;&#x2d;&#x75;&#116;&#105;&#x6c;&#x40;&#50;&#x2e;&#x36;&#46;&#48;">&#104;&#101;&#120;&#111;&#x2d;&#x75;&#116;&#105;&#x6c;&#x40;&#50;&#x2e;&#x36;&#46;&#48;</a><br>npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.3.2 (node_modules/chokidar/node_modules/fsevents):<br>npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for <a href="mailto:&#102;&#x73;&#x65;&#x76;&#101;&#x6e;&#x74;&#x73;&#x40;&#50;&#x2e;&#51;&#x2e;&#50;">&#102;&#x73;&#x65;&#x76;&#101;&#x6e;&#x74;&#x73;&#x40;&#50;&#x2e;&#51;&#x2e;&#50;</a>: wanted {“os”:”darwin”,”arch”:”any”} (current: {“os”:”linux”,”arch”:”s390x”})<br>npm WARN notsup Unsupported engine for <a href="mailto:&#104;&#x69;&#103;&#x68;&#x6c;&#x69;&#x67;&#104;&#x74;&#x2e;&#106;&#x73;&#x40;&#49;&#49;&#x2e;&#53;&#46;&#x31;">&#104;&#x69;&#103;&#x68;&#x6c;&#x69;&#x67;&#104;&#x74;&#x2e;&#106;&#x73;&#x40;&#49;&#49;&#x2e;&#53;&#46;&#x31;</a>: wanted: {“node”:”&gt;=12.0.0”} (current: {“node”:”10.19.0”,”npm”:”6.14.4”})<br>npm WARN notsup Not compatible with your version of node/npm: <a href="mailto:&#x68;&#x69;&#x67;&#x68;&#x6c;&#105;&#103;&#104;&#116;&#x2e;&#106;&#115;&#x40;&#49;&#49;&#x2e;&#53;&#46;&#49;">&#x68;&#x69;&#x67;&#x68;&#x6c;&#105;&#103;&#104;&#116;&#x2e;&#106;&#115;&#x40;&#49;&#49;&#x2e;&#53;&#46;&#49;</a><br>npm WARN notsup Unsupported engine for <a href="mailto:&#104;&#101;&#120;&#x6f;&#x2d;&#108;&#x6f;&#103;&#x40;&#x33;&#46;&#48;&#46;&#x30;">&#104;&#101;&#120;&#x6f;&#x2d;&#108;&#x6f;&#103;&#x40;&#x33;&#46;&#48;&#46;&#x30;</a>: wanted: {“node”:”&gt;=12.4.0”} (current: {“node”:”10.19.0”,”npm”:”6.14.4”})<br>npm WARN notsup Not compatible with your version of node/npm: <a href="mailto:&#104;&#101;&#120;&#111;&#x2d;&#x6c;&#111;&#103;&#64;&#x33;&#46;&#x30;&#46;&#48;">&#104;&#101;&#120;&#111;&#x2d;&#x6c;&#111;&#103;&#64;&#x33;&#46;&#x30;&#46;&#48;</a><br>npm WARN enoent ENOENT: no such file or directory, open ‘/home/linux1/package.json’<br>npm WARN linux1 No description<br>npm WARN linux1 No repository field.<br>npm WARN linux1 No README data<br>npm WARN linux1 No license field.</p><h3 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h3><p>考虑到npm源的问题，默认的应该是淘宝源，可以使用<code>npm get registry</code>来查看当前的源，切换成原镜像源即可</p><p>切换命令：<code>npm config set registry https://registry.npmjs.org/</code></p><h3 id="解决结果"><a href="#解决结果" class="headerlink" title="解决结果"></a>解决结果</h3><p><img src="1.png"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;报错提示&quot;&gt;&lt;a href=&quot;#报错提示&quot; class=&quot;headerlink&quot; title=&quot;报错提示&quot;&gt;&lt;/a&gt;报错提示&lt;/h3&gt;&lt;p&gt;npm WARN saveError ENOENT: no such file or directory, open ‘/h</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Windows邮件添加QQ邮箱</title>

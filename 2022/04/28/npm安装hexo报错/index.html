@@ -11,7 +11,7 @@
   
   <title>
     
-      Archives 
+      npm安装hexo报错 
       
       
       |
@@ -102,138 +102,122 @@
 
 
       <div class="flex-container">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2022</span>
-          </h2>
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">npm安装hexo报错</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime" title="Update time"></i>
+          2022-04-28 10:20:16
+        </span>
+        
+      </div>
+      <div class="markdown-body">
+        <h3 id="报错提示"><a href="#报错提示" class="headerlink" title="报错提示"></a>报错提示</h3><p>npm WARN saveError ENOENT: no such file or directory, open ‘/home/linux1/package.json’<br>npm notice created a lockfile as package-lock.json. You should commit this file.<br>npm WARN notsup Unsupported engine for <a href="mailto:&#x68;&#x65;&#120;&#111;&#45;&#x75;&#116;&#105;&#108;&#64;&#50;&#46;&#54;&#x2e;&#x30;">&#x68;&#x65;&#120;&#111;&#45;&#x75;&#116;&#105;&#108;&#64;&#50;&#46;&#54;&#x2e;&#x30;</a>: wanted: {“node”:”&gt;=12.4.0”} (current: {“node”:”10.19.0”,”npm”:”6.14.4”})<br>npm WARN notsup Not compatible with your version of node/npm: <a href="mailto:&#104;&#101;&#120;&#111;&#x2d;&#x75;&#116;&#105;&#x6c;&#x40;&#50;&#x2e;&#x36;&#46;&#48;">&#104;&#101;&#120;&#111;&#x2d;&#x75;&#116;&#105;&#x6c;&#x40;&#50;&#x2e;&#x36;&#46;&#48;</a><br>npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.3.2 (node_modules/chokidar/node_modules/fsevents):<br>npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for <a href="mailto:&#102;&#x73;&#x65;&#x76;&#101;&#x6e;&#x74;&#x73;&#x40;&#50;&#x2e;&#51;&#x2e;&#50;">&#102;&#x73;&#x65;&#x76;&#101;&#x6e;&#x74;&#x73;&#x40;&#50;&#x2e;&#51;&#x2e;&#50;</a>: wanted {“os”:”darwin”,”arch”:”any”} (current: {“os”:”linux”,”arch”:”s390x”})<br>npm WARN notsup Unsupported engine for <a href="mailto:&#104;&#x69;&#103;&#x68;&#x6c;&#x69;&#x67;&#104;&#x74;&#x2e;&#106;&#x73;&#x40;&#49;&#49;&#x2e;&#53;&#46;&#x31;">&#104;&#x69;&#103;&#x68;&#x6c;&#x69;&#x67;&#104;&#x74;&#x2e;&#106;&#x73;&#x40;&#49;&#49;&#x2e;&#53;&#46;&#x31;</a>: wanted: {“node”:”&gt;=12.0.0”} (current: {“node”:”10.19.0”,”npm”:”6.14.4”})<br>npm WARN notsup Not compatible with your version of node/npm: <a href="mailto:&#x68;&#x69;&#x67;&#x68;&#x6c;&#105;&#103;&#104;&#116;&#x2e;&#106;&#115;&#x40;&#49;&#49;&#x2e;&#53;&#46;&#49;">&#x68;&#x69;&#x67;&#x68;&#x6c;&#105;&#103;&#104;&#116;&#x2e;&#106;&#115;&#x40;&#49;&#49;&#x2e;&#53;&#46;&#49;</a><br>npm WARN notsup Unsupported engine for <a href="mailto:&#104;&#101;&#120;&#x6f;&#x2d;&#108;&#x6f;&#103;&#x40;&#x33;&#46;&#48;&#46;&#x30;">&#104;&#101;&#120;&#x6f;&#x2d;&#108;&#x6f;&#103;&#x40;&#x33;&#46;&#48;&#46;&#x30;</a>: wanted: {“node”:”&gt;=12.4.0”} (current: {“node”:”10.19.0”,”npm”:”6.14.4”})<br>npm WARN notsup Not compatible with your version of node/npm: <a href="mailto:&#104;&#101;&#120;&#111;&#x2d;&#x6c;&#111;&#103;&#64;&#x33;&#46;&#x30;&#46;&#48;">&#104;&#101;&#120;&#111;&#x2d;&#x6c;&#111;&#103;&#64;&#x33;&#46;&#x30;&#46;&#48;</a><br>npm WARN enoent ENOENT: no such file or directory, open ‘/home/linux1/package.json’<br>npm WARN linux1 No description<br>npm WARN linux1 No repository field.<br>npm WARN linux1 No README data<br>npm WARN linux1 No license field.</p>
+<h3 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h3><p>考虑到npm源的问题，默认的应该是淘宝源，可以使用<code>npm get registry</code>来查看当前的源，切换成原镜像源即可</p>
+<p>切换命令：<code>npm config set registry https://registry.npmjs.org/</code></p>
+<h3 id="解决结果"><a href="#解决结果" class="headerlink" title="解决结果"></a>解决结果</h3><p><img src="1.png"></p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2022/02/23/Windows%E9%82%AE%E4%BB%B6%E6%B7%BB%E5%8A%A0QQ%E9%82%AE%E7%AE%B1/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime" title="Update time"></i>
+              2022-04-28 10:20:16
+            </span>
+            
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
         </div>
       
-      <div class="post-item" title="npm安装hexo报错">
-        <div class="time-m-d">04-28</div>
-        <div class="title">
-          <a href="/2022/04/28/npm%E5%AE%89%E8%A3%85hexo%E6%8A%A5%E9%94%99/">
-            <span>npm安装hexo报错</span>
-          </a>
-        </div>
-      </div>
+    </div>
     
-      <div class="post-item" title="Windows邮件添加QQ邮箱">
-        <div class="time-m-d">02-23</div>
-        <div class="title">
-          <a href="/2022/02/23/Windows%E9%82%AE%E4%BB%B6%E6%B7%BB%E5%8A%A0QQ%E9%82%AE%E7%AE%B1/">
-            <span>Windows邮件添加QQ邮箱</span>
-          </a>
-        </div>
-      </div>
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">Contents</div>
+    <div class="catalog-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%A5%E9%94%99%E6%8F%90%E7%A4%BA"><span class="toc-text">报错提示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%A5%E9%94%99%E5%8E%9F%E5%9B%A0"><span class="toc-text">报错原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E7%BB%93%E6%9E%9C"><span class="toc-text">解决结果</span></a></li></ol>
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
     
-      <div class="post-item" title="Java踩坑记">
-        <div class="time-m-d">01-23</div>
-        <div class="title">
-          <a href="/2022/01/23/Java%E8%B8%A9%E5%9D%91%E8%AE%B0/">
-            <span>Java踩坑记</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="禁用显卡自动更新">
-        <div class="time-m-d">01-17</div>
-        <div class="title">
-          <a href="/2022/01/17/%E7%A6%81%E7%94%A8%E6%98%BE%E5%8D%A1%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0/">
-            <span>禁用显卡自动更新</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Git基操记录">
-        <div class="time-m-d">01-13</div>
-        <div class="title">
-          <a href="/2022/01/13/Git%E5%9F%BA%E6%93%8D%E8%AE%B0%E5%BD%95/">
-            <span>Git基操记录</span>
-          </a>
-        </div>
-      </div>
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2021</span>
-          </h2>
-        </div>
-      
-      <div class="post-item" title="关于博主设备配置">
-        <div class="time-m-d">12-04</div>
-        <div class="title">
-          <a href="/2021/12/04/%E5%85%B3%E4%BA%8E%E5%8D%9A%E4%B8%BB%E8%AE%BE%E5%A4%87%E9%85%8D%E7%BD%AE/">
-            <span>关于博主设备配置</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="关于网站的主题与优化">
-        <div class="time-m-d">12-01</div>
-        <div class="title">
-          <a href="/2021/12/01/%E5%85%B3%E4%BA%8E%E7%BD%91%E7%AB%99%E7%9A%84%E4%B8%BB%E9%A2%98%E4%B8%8E%E4%BC%98%E5%8C%96/">
-            <span>关于网站的主题与优化</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Java算法之数组奇偶数列输出">
-        <div class="time-m-d">12-01</div>
-        <div class="title">
-          <a href="/2021/12/01/Java%E7%AE%97%E6%B3%95%E4%B9%8B%E6%95%B0%E7%BB%84%E5%A5%87%E5%81%B6%E6%95%B0%E5%88%97%E8%BE%93%E5%87%BA/">
-            <span>Java算法之数组奇偶数列输出</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Java算法之三位整数和">
-        <div class="time-m-d">11-25</div>
-        <div class="title">
-          <a href="/2021/11/25/Java%E7%AE%97%E6%B3%95%E4%B9%8B%E4%B8%89%E4%BD%8D%E6%95%B4%E6%95%B0%E5%92%8C/">
-            <span>Java算法之三位整数和</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Java中删除与增加数组元素">
-        <div class="time-m-d">11-23</div>
-        <div class="title">
-          <a href="/2021/11/23/Java%E4%B8%AD%E5%88%A0%E9%99%A4%E4%B8%8E%E5%A2%9E%E5%8A%A0%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0/">
-            <span>Java中删除与增加数组元素</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="关于搭建此网站教程">
-        <div class="time-m-d">11-05</div>
-        <div class="title">
-          <a href="/2021/11/05/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BA%E6%AD%A4%E7%BD%91%E7%AB%99%E6%95%99%E7%A8%8B/">
-            <span>关于搭建此网站教程</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Inspiration">
-        <div class="time-m-d">11-04</div>
-        <div class="title">
-          <a href="/2021/11/04/Inspiration/">
-            <span>Inspiration</span>
-          </a>
-        </div>
+      <div class="comments-container">
+        
+
+
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+  <div id="vcomments"></div>
+
+  <script>
+    new Valine({
+      el: '#vcomments',
+      appId: 'Eh94Br4L99dLsJqbMwx5cGT6-gzGzoHsz',
+      appKey: 'XNjC7RBsVKQ5cw1w9GPtFt9s',
+      placeholder: 'Welcome!',
+      avatar: 'retro',
+      lang: 'en'
+    })
+  </script>
+
+    <style>
+      .comments-container .v .vempty {
+        display: none!important;
+      }
+    </style>
+
+
+
+
       </div>
     
   </div>
-</div>
+
 
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
@@ -528,6 +512,24 @@
 
 
         
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + npm%E5%AE%89%E8%A3%85hexo%E6%8A%A5%E9%94%99 + '&url=' + http%3A%2F%2Fexample.com%2F2022%2F04%2F28%2Fnpm%25E5%25AE%2589%25E8%25A3%2585hexo%25E6%258A%25A5%25E9%2594%2599%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2022/04/28/npm%E5%AE%89%E8%A3%85hexo%E6%8A%A5%E9%94%99/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
   
 <script src="/js/shares.js"></script>
