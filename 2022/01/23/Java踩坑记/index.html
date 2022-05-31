@@ -206,7 +206,7 @@ MathJax = {
 </blockquote>
 </li>
 <li><p>java中所有函数都属于某个类的方法，因此java中的main方法必须有一个外壳类，也就是</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class welcome &#123;          //此处welcome为外壳类</span><br><span class="line">    public static void main(String[] args)</span><br><span class="line">    &#123;</span><br><span class="line">        ......</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">welcome</span> </span>&#123;          <span class="comment">//此处welcome为外壳类</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        ......</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 <li><p>java中的main方法必须是静态的</p>
 </li>
 <li><p>需要程序结束之后运行其他内容的时候需要用到 <code>System.exit</code></p>
@@ -289,9 +289,9 @@ MathJax = {
 <li>在使用Math函数的时候需要在顶部添加<br><code>import static java.lang.Math.*</code></li>
 <li>对浮点数进行射入运算以便于得到最接近的整数，使用Math.round（注意在对数值直接进行强制转化的时候并不会自动四舍五入）</li>
 </ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class Qzlxzh&#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        double x = 9.8127381367;</span><br><span class="line">        int nx = (int) Math.round(x);</span><br><span class="line">        System.out.print(nx);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;           //在这里由于x值接近9，使用Math.round取值进行int强制类型转化得到10</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Qzlxzh</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">double</span> x = <span class="number">9.8127381367</span>;</span><br><span class="line">        <span class="keyword">int</span> nx = (<span class="keyword">int</span>) Math.round(x);</span><br><span class="line">        System.out.print(nx);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;           <span class="comment">//在这里由于x值接近9，使用Math.round取值进行int强制类型转化得到10</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public class Qzlxzh&#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        double x = 9.8127381367;</span><br><span class="line">        int nx = (int) x;</span><br><span class="line">        System.out.print(nx);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;           //直接强制类型转化的时候得到值9</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Qzlxzh</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">double</span> x = <span class="number">9.8127381367</span>;</span><br><span class="line">        <span class="keyword">int</span> nx = (<span class="keyword">int</span>) x;</span><br><span class="line">        System.out.print(nx);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;           <span class="comment">//直接强制类型转化的时候得到值9</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>++n 表示在运行的时候先自增再运算<br>n++ 表示在运行时先运算再自增<br>不能使用Java保留字作为变量名<br>声明变量之后必须要初始化变量方可使用，否则在C++，Java中均会报错</p>
@@ -433,6 +433,108 @@ MathJax = {
 <li>反射</li>
 <li>继承的设计技巧</li>
 </ul>
+<h2 id="七-JDBC"><a href="#七-JDBC" class="headerlink" title="七.JDBC"></a>七.JDBC</h2><ol>
+<li><p>概述：JDBC，Java Database Connectivity ——Java数据库连接</p>
+</li>
+<li><p>JDBC由一组用Java语言编写的类与接口组成</p>
+</li>
+<li><p>驱动程序（Driver）来实现对不同关系型数据库的操作</p>
+</li>
+<li><p>JDBC操作数据库基本步骤（六步法）</p>
+</li>
+</ol>
+<blockquote>
+<p>1.注册驱动（只需一次）<br>2.建立连接（Connection）<br>3.创建对象和执行SQL的语句<br>4.执行SQL语句<br>5.处理执行结果<br>6.释放资源（关闭）</p>
+</blockquote>
+<ol start="5">
+<li>JDBC常用类和接口</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>接口名或类名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>java.sql.Connection</td>
+<td>与特定数据库的连接（会话）。能够通过getMetaData 方法获得数据库提供的信息、所支持的SQL  语法、存储过程和此连接的功能等信息。代表了数据库。</td>
+</tr>
+<tr>
+<td>2</td>
+<td>java.sql.Driver</td>
+<td>每个驱动程序类必需实现的接口，同时，每个数据库驱动程序都应该提供一个实现Driver  接口的类。</td>
+</tr>
+<tr>
+<td>3</td>
+<td>java.sql.DriverManager</td>
+<td>管理一组JDBC  驱动程序的基本服务。作为初始化的一部分，此接口会尝试加载在“jdbc.drivers”系统属性中引用的驱动程序。只是一个辅助类，是工具。</td>
+</tr>
+<tr>
+<td>4</td>
+<td>java.sql.Statement</td>
+<td>用于执行静态SQL  语句并返回其生成结果的对象。</td>
+</tr>
+<tr>
+<td>5</td>
+<td>java.sql.PreparedStatement</td>
+<td>继承Statement  接口，表示预编译的SQL  语句的对象，SQL  语句被预编译并且存储在PreparedStatement 对象中。然后可以使用此对象高效地多次执行该语句。</td>
+</tr>
+<tr>
+<td>6</td>
+<td>java.sql.CallableStatement</td>
+<td>用来访问数据库中的存储过程。它提供了一些方法来指定语句所使用的输入/输出参数。</td>
+</tr>
+<tr>
+<td>7</td>
+<td>java.sql.ResultSet</td>
+<td>负责存储查询数据库的结果，并提供一系列的方法对数据库进行新增、删除和修改操作，也负责维护一个记录指针（Cursor），记录指针指向数据表中的某个记录，通过适当地移动记录指针，可以随心所欲地存取数据库，加强程序的效率。</td>
+</tr>
+<tr>
+<td>8</td>
+<td>java.sql.ResultSetMetaData</td>
+<td>可用于获取关于ResultSet 对象中列的类型和属性信息的对象。</td>
+</tr>
+<tr>
+<td>9</td>
+<td>java.sql.DatabaseMetaData</td>
+<td>包含了关于数据库整体元数据信息。</td>
+</tr>
+</tbody></table>
+<ol start="6">
+<li>数据库连接技术</li>
+</ol>
+<blockquote>
+<p>JDBC-ODBC桥接<br>本地API驱动<br>网络协议驱动<br>纯粹的Java驱动</p>
+</blockquote>
+<ol start="7">
+<li>MySQL的注册驱动</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class.forName(<span class="string">&quot;com.mysql.cj.jdbc.Driver&quot;</span>)	<span class="comment">//这是8.0以上版本的，以下版本去掉cj</span></span><br></pre></td></tr></table></figure>
+
+<ol start="8">
+<li>建立连接语句</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connection con = DriverManager.getConnection(url,<span class="string">&quot;用户名&quot;</span>,<span class="string">&quot;Pass&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<ol start="9">
+<li><p>书写SQL语句</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String sql = <span class="keyword">null</span>;</span><br><span class="line">sql = <span class="string">&quot;create databases mysql&quot;</span>;	(执行语句)</span><br><span class="line">pStmt.executeUpdate(sql);</span><br></pre></td></tr></table></figure></li>
+<li><p>查询结果</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">rs = (ResultSet)pStmt.executeQuery();</span><br><span class="line"><span class="keyword">while</span>(rs.next())</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">int</span> id = rs.getInt(<span class="number">1</span>);</span><br><span class="line">	String name = rs.getString(<span class="number">2</span>);</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="八-File-IO"><a href="#八-File-IO" class="headerlink" title="八.File/IO"></a>八.File/IO</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Stream</span><br><span class="line">File</span><br><span class="line">I/O</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><p><font color='red'>File</font> 利用此函数对文件进行操作</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">File filename = <span class="keyword">new</span> File(pathname: <span class="string">&quot; &quot;</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p><font color='red'>FileReader FileWriter</font>进行文件的读与写(以<font color = 'red'>字符</font>的方式进行)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FileReader fr = <span class="keyword">new</span> FileReader(file)</span><br><span class="line">FileWriter fw = <span class="keyword">new</span> FileWriter(file)</span><br></pre></td></tr></table></figure></li>
+<li><p><font color='red'>FileInputStream FileOuputStream</font>同样可以对文件进行读写（<font color='blue'>使用字节的方式</font>）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FileInputStream fi = <span class="keyword">new</span> FileInputStream(file1);</span><br><span class="line">FileOutputStream fo = <span class="keyword">new</span> FileOutputStream(file2);</span><br></pre></td></tr></table></figure></li>
+</ol>
 
       </div>
       
@@ -481,7 +583,7 @@ MathJax = {
   <div class="post-catalog hidden" id="catalog">
     <div class="title">Contents</div>
     <div class="catalog-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E5%9F%BA%E7%A1%80"><span class="toc-text">一.基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">二.数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1"><span class="toc-text">三.类与对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E8%AE%BE%E8%AE%A1%E6%8A%80%E5%B7%A7"><span class="toc-text">类设计技巧</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B-%E6%95%B0%E7%BB%84"><span class="toc-text">四.数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94-%E6%B3%A8%E9%87%8A"><span class="toc-text">五.注释</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E6%B3%A8%E9%87%8A"><span class="toc-text">类注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E6%B3%A8%E9%87%8A"><span class="toc-text">方法注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%9F%E6%B3%A8%E9%87%8A"><span class="toc-text">域注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E7%94%A8%E6%B3%A8%E9%87%8A"><span class="toc-text">通用注释</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD-%E7%BB%A7%E6%89%BF"><span class="toc-text">六.继承</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E5%9F%BA%E7%A1%80"><span class="toc-text">一.基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">二.数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1"><span class="toc-text">三.类与对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E8%AE%BE%E8%AE%A1%E6%8A%80%E5%B7%A7"><span class="toc-text">类设计技巧</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B-%E6%95%B0%E7%BB%84"><span class="toc-text">四.数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94-%E6%B3%A8%E9%87%8A"><span class="toc-text">五.注释</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E6%B3%A8%E9%87%8A"><span class="toc-text">类注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E6%B3%A8%E9%87%8A"><span class="toc-text">方法注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%9F%E6%B3%A8%E9%87%8A"><span class="toc-text">域注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E7%94%A8%E6%B3%A8%E9%87%8A"><span class="toc-text">通用注释</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD-%E7%BB%A7%E6%89%BF"><span class="toc-text">六.继承</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83-JDBC"><span class="toc-text">七.JDBC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB-File-IO"><span class="toc-text">八.File&#x2F;IO</span></a></li></ol>
     </div>
   </div>
 
