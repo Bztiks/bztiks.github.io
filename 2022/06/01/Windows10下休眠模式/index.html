@@ -11,7 +11,7 @@
   
   <title>
     
-      archive_a: 2022/1 
+      Windows10下休眠模式 
       
       
       |
@@ -102,147 +102,145 @@
 
 
       <div class="flex-container">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2022</span>
-          </h2>
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">Windows10下休眠模式</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime" title="Update time"></i>
+          2022-06-01 11:41:15
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags" title="Tags"></i>
+                
+                <span class="span--tag">
+                  <a href="/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/" title="小知识">
+                    <b>#</b> 小知识
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>经常用笔记本且系统是Windows的朋友可能会感觉自己外出啥的，电脑放包里电量流失的很快，有时电脑还会很烫，这个时候电脑就处于假死状态，没有真正的进入休眠，睡眠模式假死的概率相对来说很高，但是进电源计划里面逛了圈又没找到休眠的开关</p>
+<h2 id="休眠模式"><a href="#休眠模式" class="headerlink" title="休眠模式"></a>休眠模式</h2><p>当Windows系统进入休眠模式之后，将电脑当前的运行状态和数据保存到了硬盘，然后整台电脑的硬件(cpu、内存、硬盘等)都处于断电状态，这种模式完全不耗电，当我们需要恢复的时候，系统将从硬盘中读取数据内容到内存中，由于硬盘的运行速率与内存相差甚远，所以唤醒休眠状态要比唤醒待机状态更费时一些，但是休眠状态是整体硬件处于断电状态，所以即使在电源断开的情况下，下次依然能恢复到休眠前的电脑运行状态。</p>
+<h2 id="睡眠模式"><a href="#睡眠模式" class="headerlink" title="睡眠模式"></a>睡眠模式</h2><p>当Windows系统进入睡眠模式之后，将电脑当前的内存中的运行状态和数据存储在硬盘中，并且保持给内存供电，内存中的运行数据依然存在，这个过程相当于同时开启了待机和休眠。</p>
+<p>　　如果没出现电源断开等问题，那么当唤醒睡眠状态时，首先从内存中读取数据，快读恢复电脑的运行状态，如果出现了电源断开等异常，那么在唤醒睡眠时，将从硬盘上恢复数据，速度相对较慢</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在Windows Powershell中输入命令 <code>powercfg -h on</code>,回到电源计划中就可以发现有休眠模式了。</p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2022/04/28/npm%E5%AE%89%E8%A3%85hexo%E6%8A%A5%E9%94%99/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime" title="Update time"></i>
+              2022-06-01 11:41:15
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags" title="Tags"></i>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/" title="小知识">
+                        <b>#</b> 小知识
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
         </div>
       
-      <div class="post-item" title="Windows10下休眠模式">
-        <div class="time-m-d">06-01</div>
-        <div class="title">
-          <a href="/2022/06/01/Windows10%E4%B8%8B%E4%BC%91%E7%9C%A0%E6%A8%A1%E5%BC%8F/">
-            <span>Windows10下休眠模式</span>
-          </a>
-        </div>
-      </div>
+    </div>
     
-      <div class="post-item" title="npm安装hexo报错">
-        <div class="time-m-d">04-28</div>
-        <div class="title">
-          <a href="/2022/04/28/npm%E5%AE%89%E8%A3%85hexo%E6%8A%A5%E9%94%99/">
-            <span>npm安装hexo报错</span>
-          </a>
-        </div>
-      </div>
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">Contents</div>
+    <div class="catalog-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%B7%E5%9B%A0"><span class="toc-text">起因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%91%E7%9C%A0%E6%A8%A1%E5%BC%8F"><span class="toc-text">休眠模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9D%A1%E7%9C%A0%E6%A8%A1%E5%BC%8F"><span class="toc-text">睡眠模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-text">解决方案</span></a></li></ol>
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
     
-      <div class="post-item" title="Windows邮件添加QQ邮箱">
-        <div class="time-m-d">02-23</div>
-        <div class="title">
-          <a href="/2022/02/23/Windows%E9%82%AE%E4%BB%B6%E6%B7%BB%E5%8A%A0QQ%E9%82%AE%E7%AE%B1/">
-            <span>Windows邮件添加QQ邮箱</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Java踩坑记">
-        <div class="time-m-d">01-23</div>
-        <div class="title">
-          <a href="/2022/01/23/Java%E8%B8%A9%E5%9D%91%E8%AE%B0/">
-            <span>Java踩坑记</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="禁用显卡自动更新">
-        <div class="time-m-d">01-17</div>
-        <div class="title">
-          <a href="/2022/01/17/%E7%A6%81%E7%94%A8%E6%98%BE%E5%8D%A1%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0/">
-            <span>禁用显卡自动更新</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Git基操记录">
-        <div class="time-m-d">01-13</div>
-        <div class="title">
-          <a href="/2022/01/13/Git%E5%9F%BA%E6%93%8D%E8%AE%B0%E5%BD%95/">
-            <span>Git基操记录</span>
-          </a>
-        </div>
-      </div>
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2021</span>
-          </h2>
-        </div>
-      
-      <div class="post-item" title="关于博主设备配置">
-        <div class="time-m-d">12-04</div>
-        <div class="title">
-          <a href="/2021/12/04/%E5%85%B3%E4%BA%8E%E5%8D%9A%E4%B8%BB%E8%AE%BE%E5%A4%87%E9%85%8D%E7%BD%AE/">
-            <span>关于博主设备配置</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="关于网站的主题与优化">
-        <div class="time-m-d">12-01</div>
-        <div class="title">
-          <a href="/2021/12/01/%E5%85%B3%E4%BA%8E%E7%BD%91%E7%AB%99%E7%9A%84%E4%B8%BB%E9%A2%98%E4%B8%8E%E4%BC%98%E5%8C%96/">
-            <span>关于网站的主题与优化</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Java算法之数组奇偶数列输出">
-        <div class="time-m-d">12-01</div>
-        <div class="title">
-          <a href="/2021/12/01/Java%E7%AE%97%E6%B3%95%E4%B9%8B%E6%95%B0%E7%BB%84%E5%A5%87%E5%81%B6%E6%95%B0%E5%88%97%E8%BE%93%E5%87%BA/">
-            <span>Java算法之数组奇偶数列输出</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Java算法之三位整数和">
-        <div class="time-m-d">11-25</div>
-        <div class="title">
-          <a href="/2021/11/25/Java%E7%AE%97%E6%B3%95%E4%B9%8B%E4%B8%89%E4%BD%8D%E6%95%B4%E6%95%B0%E5%92%8C/">
-            <span>Java算法之三位整数和</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Java中删除与增加数组元素">
-        <div class="time-m-d">11-23</div>
-        <div class="title">
-          <a href="/2021/11/23/Java%E4%B8%AD%E5%88%A0%E9%99%A4%E4%B8%8E%E5%A2%9E%E5%8A%A0%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0/">
-            <span>Java中删除与增加数组元素</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="关于搭建此网站教程">
-        <div class="time-m-d">11-05</div>
-        <div class="title">
-          <a href="/2021/11/05/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BA%E6%AD%A4%E7%BD%91%E7%AB%99%E6%95%99%E7%A8%8B/">
-            <span>关于搭建此网站教程</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Inspiration">
-        <div class="time-m-d">11-04</div>
-        <div class="title">
-          <a href="/2021/11/04/Inspiration/">
-            <span>Inspiration</span>
-          </a>
-        </div>
+      <div class="comments-container">
+        
+
+
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+  <div id="vcomments"></div>
+
+  <script>
+    new Valine({
+      el: '#vcomments',
+      appId: 'Eh94Br4L99dLsJqbMwx5cGT6-gzGzoHsz',
+      appKey: 'XNjC7RBsVKQ5cw1w9GPtFt9s',
+      placeholder: 'Welcome!',
+      avatar: 'retro',
+      lang: 'en'
+    })
+  </script>
+
+    <style>
+      .comments-container .v .vempty {
+        display: none!important;
+      }
+    </style>
+
+
+
+
       </div>
     
   </div>
-</div>
+
 
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
@@ -533,6 +531,24 @@
 
 
         
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + Windows10%E4%B8%8B%E4%BC%91%E7%9C%A0%E6%A8%A1%E5%BC%8F + '&url=' + http%3A%2F%2Fexample.com%2F2022%2F06%2F01%2FWindows10%25E4%25B8%258B%25E4%25BC%2591%25E7%259C%25A0%25E6%25A8%25A1%25E5%25BC%258F%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2022/06/01/Windows10%E4%B8%8B%E4%BC%91%E7%9C%A0%E6%A8%A1%E5%BC%8F/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
   
 <script src="/js/shares.js"></script>
