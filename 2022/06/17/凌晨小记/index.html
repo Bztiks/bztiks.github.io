@@ -11,7 +11,7 @@
   
   <title>
     
-      archive_a: 2022/6 
+      凌晨小记 
       
       
       |
@@ -102,192 +102,128 @@
 
 
       <div class="flex-container">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2022</span>
-          </h2>
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">凌晨小记</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime" title="Update time"></i>
+          2022-06-17 00:50:36
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags" title="Tags"></i>
+                
+                <span class="span--tag">
+                  <a href="/tags/Myself/" title="Myself">
+                    <b>#</b> Myself
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <blockquote>
+<p>我很庆幸，尽管身边有很多令我讨厌的人或事，但是总有那么一两个会默默陪着你的小傻瓜</p>
+</blockquote>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2022/06/13/%E5%B0%8F%E6%80%9D/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime" title="Update time"></i>
+              2022-06-17 00:50:36
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags" title="Tags"></i>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/Myself/" title="Myself">
+                        <b>#</b> Myself
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
         </div>
       
-      <div class="post-item" title="凌晨小记">
-        <div class="time-m-d">06-17</div>
-        <div class="title">
-          <a href="/2022/06/17/%E5%87%8C%E6%99%A8%E5%B0%8F%E8%AE%B0/">
-            <span>凌晨小记</span>
-          </a>
-        </div>
-      </div>
+    </div>
     
-      <div class="post-item" title="小思">
-        <div class="time-m-d">06-13</div>
-        <div class="title">
-          <a href="/2022/06/13/%E5%B0%8F%E6%80%9D/">
-            <span>小思</span>
-          </a>
-        </div>
-      </div>
+
     
-      <div class="post-item" title="Windows10下CSGO启动黑屏闪退">
-        <div class="time-m-d">06-12</div>
-        <div class="title">
-          <a href="/2022/06/12/Windows10%E4%B8%8BCSGO%E5%90%AF%E5%8A%A8%E9%BB%91%E5%B1%8F%E9%97%AA%E9%80%80/">
-            <span>Windows10下CSGO启动黑屏闪退</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="利用线程实时显示时间">
-        <div class="time-m-d">06-08</div>
-        <div class="title">
-          <a href="/2022/06/08/%E5%88%A9%E7%94%A8%E7%BA%BF%E7%A8%8B%E5%AE%9E%E6%97%B6%E6%98%BE%E7%A4%BA%E6%97%B6%E9%97%B4/">
-            <span>利用线程实时显示时间</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Pyinstaller打包exe报错">
-        <div class="time-m-d">06-07</div>
-        <div class="title">
-          <a href="/2022/06/07/Pyinstaller%E6%89%93%E5%8C%85exe%E6%8A%A5%E9%94%99/">
-            <span>Pyinstaller打包exe报错</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Windows10下休眠模式">
-        <div class="time-m-d">06-01</div>
-        <div class="title">
-          <a href="/2022/06/01/Windows10%E4%B8%8B%E4%BC%91%E7%9C%A0%E6%A8%A1%E5%BC%8F/">
-            <span>Windows10下休眠模式</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="npm安装hexo报错">
-        <div class="time-m-d">04-28</div>
-        <div class="title">
-          <a href="/2022/04/28/npm%E5%AE%89%E8%A3%85hexo%E6%8A%A5%E9%94%99/">
-            <span>npm安装hexo报错</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Windows邮件添加QQ邮箱">
-        <div class="time-m-d">02-23</div>
-        <div class="title">
-          <a href="/2022/02/23/Windows%E9%82%AE%E4%BB%B6%E6%B7%BB%E5%8A%A0QQ%E9%82%AE%E7%AE%B1/">
-            <span>Windows邮件添加QQ邮箱</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Java踩坑记">
-        <div class="time-m-d">01-23</div>
-        <div class="title">
-          <a href="/2022/01/23/Java%E8%B8%A9%E5%9D%91%E8%AE%B0/">
-            <span>Java踩坑记</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="禁用显卡自动更新">
-        <div class="time-m-d">01-17</div>
-        <div class="title">
-          <a href="/2022/01/17/%E7%A6%81%E7%94%A8%E6%98%BE%E5%8D%A1%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0/">
-            <span>禁用显卡自动更新</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Git基操记录">
-        <div class="time-m-d">01-13</div>
-        <div class="title">
-          <a href="/2022/01/13/Git%E5%9F%BA%E6%93%8D%E8%AE%B0%E5%BD%95/">
-            <span>Git基操记录</span>
-          </a>
-        </div>
-      </div>
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2021</span>
-          </h2>
-        </div>
-      
-      <div class="post-item" title="关于博主设备配置">
-        <div class="time-m-d">12-04</div>
-        <div class="title">
-          <a href="/2021/12/04/%E5%85%B3%E4%BA%8E%E5%8D%9A%E4%B8%BB%E8%AE%BE%E5%A4%87%E9%85%8D%E7%BD%AE/">
-            <span>关于博主设备配置</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="关于网站的主题与优化">
-        <div class="time-m-d">12-01</div>
-        <div class="title">
-          <a href="/2021/12/01/%E5%85%B3%E4%BA%8E%E7%BD%91%E7%AB%99%E7%9A%84%E4%B8%BB%E9%A2%98%E4%B8%8E%E4%BC%98%E5%8C%96/">
-            <span>关于网站的主题与优化</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Java算法之数组奇偶数列输出">
-        <div class="time-m-d">12-01</div>
-        <div class="title">
-          <a href="/2021/12/01/Java%E7%AE%97%E6%B3%95%E4%B9%8B%E6%95%B0%E7%BB%84%E5%A5%87%E5%81%B6%E6%95%B0%E5%88%97%E8%BE%93%E5%87%BA/">
-            <span>Java算法之数组奇偶数列输出</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Java算法之三位整数和">
-        <div class="time-m-d">11-25</div>
-        <div class="title">
-          <a href="/2021/11/25/Java%E7%AE%97%E6%B3%95%E4%B9%8B%E4%B8%89%E4%BD%8D%E6%95%B4%E6%95%B0%E5%92%8C/">
-            <span>Java算法之三位整数和</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Java中删除与增加数组元素">
-        <div class="time-m-d">11-23</div>
-        <div class="title">
-          <a href="/2021/11/23/Java%E4%B8%AD%E5%88%A0%E9%99%A4%E4%B8%8E%E5%A2%9E%E5%8A%A0%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0/">
-            <span>Java中删除与增加数组元素</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="关于搭建此网站教程">
-        <div class="time-m-d">11-05</div>
-        <div class="title">
-          <a href="/2021/11/05/%E5%85%B3%E4%BA%8E%E6%90%AD%E5%BB%BA%E6%AD%A4%E7%BD%91%E7%AB%99%E6%95%99%E7%A8%8B/">
-            <span>关于搭建此网站教程</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Inspiration">
-        <div class="time-m-d">11-04</div>
-        <div class="title">
-          <a href="/2021/11/04/Inspiration/">
-            <span>Inspiration</span>
-          </a>
-        </div>
+      <div class="comments-container">
+        
+
+
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+  <div id="vcomments"></div>
+
+  <script>
+    new Valine({
+      el: '#vcomments',
+      appId: 'Eh94Br4L99dLsJqbMwx5cGT6-gzGzoHsz',
+      appKey: 'XNjC7RBsVKQ5cw1w9GPtFt9s',
+      placeholder: 'Welcome!',
+      avatar: 'retro',
+      lang: 'en'
+    })
+  </script>
+
+    <style>
+      .comments-container .v .vempty {
+        display: none!important;
+      }
+    </style>
+
+
+
+
       </div>
     
   </div>
-</div>
+
 
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
@@ -578,6 +514,24 @@
 
 
         
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + %E5%87%8C%E6%99%A8%E5%B0%8F%E8%AE%B0 + '&url=' + http%3A%2F%2Fexample.com%2F2022%2F06%2F17%2F%25E5%2587%258C%25E6%2599%25A8%25E5%25B0%258F%25E8%25AE%25B0%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2022/06/17/%E5%87%8C%E6%99%A8%E5%B0%8F%E8%AE%B0/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
   
 <script src="/js/shares.js"></script>

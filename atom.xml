@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-06-16T13:41:32.184Z</updated>
+  <updated>2022-06-16T16:52:01.937Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>凌晨小记</title>
+    <link href="http://example.com/2022/06/17/%E5%87%8C%E6%99%A8%E5%B0%8F%E8%AE%B0/"/>
+    <id>http://example.com/2022/06/17/%E5%87%8C%E6%99%A8%E5%B0%8F%E8%AE%B0/</id>
+    <published>2022-06-16T16:50:36.000Z</published>
+    <updated>2022-06-16T16:52:01.937Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>我很庆幸，尽管身边有很多令我讨厌的人或事，但是总有那么一两个会默默陪着你的小傻瓜</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;我很庆幸，尽管身边有很多令我讨厌的人或事，但是总有那么一两个会默默陪着你的小傻瓜&lt;/p&gt;
+&lt;/blockquote&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="Myself" scheme="http://example.com/tags/Myself/"/>
+    
+  </entry>
   
   <entry>
     <title>小思</title>
