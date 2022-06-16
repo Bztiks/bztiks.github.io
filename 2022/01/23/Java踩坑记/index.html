@@ -515,19 +515,14 @@ MathJax = {
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class.forName(<span class="string">&quot;com.mysql.cj.jdbc.Driver&quot;</span>)	<span class="comment">//这是8.0以上版本的，以下版本去掉cj</span></span><br></pre></td></tr></table></figure>
 
 <ol start="8">
-<li>建立连接语句</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connection con = DriverManager.getConnection(url,<span class="string">&quot;用户名&quot;</span>,<span class="string">&quot;Pass&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<ol start="9">
+<li><p>建立连接语句</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connection con = DriverManager.getConnection(url,<span class="string">&quot;用户名&quot;</span>,<span class="string">&quot;Pass&quot;</span>);</span><br></pre></td></tr></table></figure></li>
 <li><p>书写SQL语句</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String sql = <span class="keyword">null</span>;</span><br><span class="line">sql = <span class="string">&quot;create databases mysql&quot;</span>;	(执行语句)</span><br><span class="line">pStmt.executeUpdate(sql);</span><br></pre></td></tr></table></figure></li>
 <li><p>查询结果</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">rs = (ResultSet)pStmt.executeQuery();</span><br><span class="line"><span class="keyword">while</span>(rs.next())</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">int</span> id = rs.getInt(<span class="number">1</span>);</span><br><span class="line">	String name = rs.getString(<span class="number">2</span>);</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
-<h2 id="八-File-IO"><a href="#八-File-IO" class="headerlink" title="八.File/IO"></a>八.File/IO</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Stream</span><br><span class="line">File</span><br><span class="line">I/O</span><br></pre></td></tr></table></figure>
-
-<ol>
+<h2 id="八-File-IO"><a href="#八-File-IO" class="headerlink" title="八.File/IO"></a>八.File/IO</h2><ol>
 <li><p><font color='red'>File</font> 利用此函数对文件进行操作</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">File filename = <span class="keyword">new</span> File(pathname: <span class="string">&quot; &quot;</span>);</span><br></pre></td></tr></table></figure></li>
 <li><p><font color='red'>FileReader FileWriter</font>进行文件的读与写(以<font color = 'red'>字符</font>的方式进行)</p>
