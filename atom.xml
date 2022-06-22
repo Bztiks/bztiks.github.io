@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-06-16T16:52:51.077Z</updated>
+  <updated>2022-06-22T14:17:52.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PHP学习笔记</title>
+    <link href="http://example.com/2022/06/22/PHP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://example.com/2022/06/22/PHP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <published>2022-06-22T14:16:14.000Z</published>
+    <updated>2022-06-22T14:17:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="PHP语言基础"><a href="#PHP语言基础" class="headerlink" title="PHP语言基础"></a>PHP语言基础</h2><ol><li>PHP变量类型不需要申明，PHP会自动根据上下文进行判断</li><li>//是单行注释，/* */是多行注释，注释语法格式是不可以嵌套使用的</li><li>标量类型有四种：整形，布尔型，字符串型，浮点型 </li><li>Heredoc结构用来赋予变量多行代码 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="variable">$str</span> = <span class="string">&lt;&lt;&lt;EOD</span></span><br><span class="line"><span class="string">这是第一行数据</span></span><br><span class="line"><span class="string">这是第二行数据</span></span><br><span class="line"><span class="string">....</span></span><br><span class="line"><span class="string">EOD</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$str</span>;</span><br></pre></td></tr></table></figure></li><li>复合类型有两种：array（数组），object（对象）</li><li>PHP也是使用new语句实例化一个类 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">foo</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">do_foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">&quot;Doing foo.&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable">$bar</span> = <span class="keyword">new</span> foo;<span class="comment">//实例化foo类</span></span><br><span class="line"><span class="variable">$bar</span> -&gt; do_foo();<span class="comment">//调用do_foo()方法</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></li><li>强制类型转化 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">   <span class="variable">$num</span> = <span class="string">&#x27;3.141592653abc&#x27;</span>;</span><br><span class="line">   <span class="keyword">echo</span> <span class="variable">$num</span>;</span><br><span class="line">   <span class="keyword">echo</span> <span class="string">&#x27;&lt;/p&gt;&#x27;</span>;</span><br><span class="line">   <span class="keyword">echo</span> (<span class="keyword">integer</span>)<span class="variable">$num</span>;<span class="comment">//强制转化变量为整形</span></span><br><span class="line">   <span class="keyword">echo</span> <span class="string">&#x27;&lt;/p&gt;&#x27;</span>;</span><br><span class="line">   <span class="keyword">echo</span> settype(<span class="variable">$num</span>,<span class="string">&#x27;float&#x27;</span>);<span class="comment">//转化为浮点，但是没有输出，需要下面echo输出</span></span><br><span class="line">   <span class="keyword">echo</span> <span class="string">&#x27;&lt;/p&gt;&#x27;</span>;</span><br><span class="line">   <span class="keyword">echo</span> <span class="variable">$num</span>;</span><br><span class="line">   <span class="meta">?&gt;</span></span><br><span class="line">   </span><br><span class="line">   运行结果</span><br><span class="line">   <span class="number">3.141592653</span>abc</span><br><span class="line">   <span class="number">3</span></span><br><span class="line">   <span class="number">1</span><span class="comment">//这里返回的1是settype函数运行的返回结果（true）</span></span><br><span class="line">   <span class="number">3.141592653</span> <span class="comment">//转化为float的值</span></span><br></pre></td></tr></table></figure></li><li>检测数据类型函数 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="variable">$num</span> = <span class="string">&#x27;3.1415926abc&#x27;</span>;</span><br><span class="line"><span class="keyword">if</span>(is_float(<span class="variable">$num</span>))<span class="comment">//此处的is_float可以换成is_double效果同理</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">&#x27;浮点&#x27;</span>;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">&#x27;非浮点&#x27;</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;PHP语言基础&quot;&gt;&lt;a href=&quot;#PHP语言基础&quot; class=&quot;headerlink&quot; title=&quot;PHP语言基础&quot;&gt;&lt;/a&gt;PHP语言基础&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;PHP变量类型不需要申明，PHP会自动根据上下文进行判断&lt;/li&gt;
+&lt;li&gt;//是单行注</summary>
+      
+    
+    
+    
+    
+    <category term="学习笔记" scheme="http://example.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>凌晨小记</title>
