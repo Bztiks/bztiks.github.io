@@ -182,7 +182,16 @@ MathJax = {
 <li><p>constant()函数用于使用常量</p>
 </li>
 <li><p>是连接运算符，用于拼接字符串</p>
-<pre><code><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="variable">$a</span> = <span class="string">&quot;Hellow &quot;</span>;</span><br><span class="line"><span class="variable">$b</span> = <span class="variable">$a</span> . <span class="string">&quot;World\n&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$b</span>;</span><br><span class="line"><span class="variable">$a</span> .= <span class="string">&quot;World!&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$a</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line">输出结果</span><br><span class="line">Hellow World</span><br><span class="line">Hellow World!</span><br></pre></td></tr></table></figure>
+<pre><code class="php">&lt;?php
+$a = &quot;Hellow &quot;;
+$b = $a . &quot;World\n&quot;;
+echo $b;
+$a .= &quot;World!&quot;;
+echo $a;
+?&gt;
+输出结果
+Hellow World
+Hellow World!
 </code></pre>
 </li>
 <li></li>
