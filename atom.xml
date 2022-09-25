@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-09-25T01:36:35.377Z</updated>
+  <updated>2022-09-25T02:19:30.977Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>npm卸载Tracker idealTree already exists</title>
+    <link href="http://example.com/2022/09/25/npm%E5%8D%B8%E8%BD%BDTracker-idealTree-already-exists/"/>
+    <id>http://example.com/2022/09/25/npm%E5%8D%B8%E8%BD%BDTracker-idealTree-already-exists/</id>
+    <published>2022-09-25T02:14:38.000Z</published>
+    <updated>2022-09-25T02:19:30.977Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p> 使用npm卸载babel插件的时候执行命令<code>npm uninstall babel...</code>出现如下报错</p><blockquote><p>npm ERR! Tracker “idealTree” already exists</p></blockquote><p>在执行卸载命令的时候是在根目录下执行的，切换到~目录之后执行不报错</p><p><img src="1.png"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h2&gt;&lt;p&gt; 使用npm卸载babel插件的时候执行命令&lt;code&gt;npm uninstall babel...&lt;/code&gt;出现如下报错&lt;/p&gt;
+&lt;b</summary>
+      
+    
+    
+    
+    
+    <category term="npm" scheme="http://example.com/tags/npm/"/>
+    
+  </entry>
   
   <entry>
     <title>2022/9/24记</title>
@@ -445,31 +468,6 @@
     
     
     <category term="Server" scheme="http://example.com/tags/Server/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Inspiration</title>
-    <link href="http://example.com/2021/11/04/Inspiration/"/>
-    <id>http://example.com/2021/11/04/Inspiration/</id>
-    <published>2021-11-04T02:49:10.000Z</published>
-    <updated>2021-11-24T15:21:41.140Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>If our life have an end,That must be self-abdication</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;If our life have an end,That must be self-abdication&lt;/p&gt;
-&lt;/blockquote&gt;
-</summary>
-      
-    
-    
-    
-    
-    <category term="Myself" scheme="http://example.com/tags/Myself/"/>
     
   </entry>
   

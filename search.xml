@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>npm卸载Tracker idealTree already exists</title>
+      <link href="/2022/09/25/npm%E5%8D%B8%E8%BD%BDTracker-idealTree-already-exists/"/>
+      <url>/2022/09/25/npm%E5%8D%B8%E8%BD%BDTracker-idealTree-already-exists/</url>
+      
+        <content type="html"><![CDATA[<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p> 使用npm卸载babel插件的时候执行命令<code>npm uninstall babel...</code>出现如下报错</p><blockquote><p>npm ERR! Tracker “idealTree” already exists</p></blockquote><p>在执行卸载命令的时候是在根目录下执行的，切换到~目录之后执行不报错</p><p><img src="1.png"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> npm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2022/9/24记</title>
       <link href="/2022/09/25/2022-9-24%E8%AE%B0/"/>
       <url>/2022/09/25/2022-9-24%E8%AE%B0/</url>
