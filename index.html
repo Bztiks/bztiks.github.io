@@ -1,672 +1,542 @@
-<!DOCTYPE HTML>
-<html>
-<head>
+<!DOCTYPE html>
+<html lang="en" color-mode="light">
+
+  <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="google-site-verification" content="" />
-  <meta name="referrer" content="unsafe-url">
-  
-  <title>The blog for Bztiks</title>
-  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="John Doe" />
+  <meta name="description" content="" />
   
   
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:site_name" content="The blog for Bztiks"/>
-  <link href="/apple-touch-icon-precomposed.png" sizes="180x180" rel="apple-touch-icon-precomposed">
-  <link rel="alternate" href="/atom.xml" title="The blog for Bztiks" type="application/atom+xml">
-  <link rel="stylesheet" href="/css/m.min.css">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
-
-<meta name="generator" content="Hexo 5.4.0"></head>
-
-<body>
-  <a id="top"></a>
-  <div id="main">
-    <div class="main-ctnr">
-      <nav class="navbar">
-  <div class="nav-container">
-  <div class="nav navbar-nav navbar-left">
-    <div class="navbar-header">
-      <a href="/" class="navbar-brand">XXX</a>
-    </div>
+  <title>
     
+     The blog for Bztiks
+  </title>
 
+  
+    <link rel="apple-touch-icon" href="/images/favicon.ico">
+    <link rel="icon" href="/images/favicon.ico">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  
+<link rel="stylesheet" href="/css/color-scheme.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/iconfont/iconfont.css">
+<link rel="stylesheet" href="/css/github-markdown.css">
+<link rel="stylesheet" href="/css/highlight.css">
+<link rel="stylesheet" href="/css/comments.css">
+
+
+  <!-- jquery3.3.1 -->
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- fancybox -->
+  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
+  <script async src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  
+<script src="/js/fancybox.js"></script>
+
+
+  
+
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
+    }
+  </script>
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="The blog for Bztiks" type="application/atom+xml">
+</head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img src="/images/TouX1.jpg" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">北褶tiks</a></div>
   </div>
-  <div id="site_search" class="">
-  <input type="text" id="local-search-input" name="q" placeholder="search" class="form-control"/>
-</div>
-<div id="local-search-result"></div>
-
-
-  <div class="nav navbar-nav navbar-right">
-    <div class="dropdown">
-      <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-        <svg class="i-link" viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M18 8 C18 8 24 2 27 5 30 8 29 12 24 16 19 20 16 21 14 17 M14 24 C14 24 8 30 5 27 2 24 3 20 8 16 13 12 16 11 18 15"></path>
-        </svg>
-      </a>
-      <base href="/">
-      <ul class="dropdown-content">
-        
-          <div>
-            <a href="/links.html">
-        links
-      </a>
-    </div>
-     
-          <div>
-            <a target="_blank" rel="noopener" href="https://github.com/XXX/">
-        Github
-      </a>
-    </div>
-     
-          <div>
-            <a href="/rss2.xml">
-        rss
-      </a>
-    </div>
-     
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">Home</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">Archives</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">Tags</a>
+        </li>
+      
+        <li class="nav-item" data-path="/about/">
+          <a href="/about/">About</a>
+        </li>
+      
     </ul>
-    </div>
-    <div class="archives"><a href="/archives">
-      <svg class="i-archive" viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-        <path d="M4 10 L4 28 28 28 28 10 M2 4 L2 10 30 10 30 4 Z M12 15 L20 15"></path>
-      </svg>
-    </a></div>
   </div>
-  </div>
-</nav>
-
-<ul class="posts">
-  
-    
-<li class="post-item">
-  
-  
-    <h1 class="index-title">
-        <a href="/2022/09/25/npm卸载Tracker-idealTree-already-exists/">
-            npm卸载&#34;Tracker idealTree already exists&#34;
-        </a>
-    </h1>
-  
-
-
-  <div class="excerpt">
-  
-    问题 使用npm卸载babel插件的时候执行命令npm uninstall babel...出现如下报错
-
-npm ERR! Tracker “idealTree” already exists
-
-在执行卸载命令的时候是在根目录下执行的，切
-  
-  <a href="/2022/09/25/npm卸载Tracker-idealTree-already-exists/">
-    more
-  </a>
-  </div>
-  <div class="index-meta">
-    <time datetime="2022-09-25T02:14:38.000Z" itemprop="datePublished">
-  <svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
-  </svg>
-  &nbsp;
-  2022-09-25
-</time>
-
-
-
-
-
-    
-    &nbsp;
-    <svg class="i-tag" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-      <circle cx="24" cy="8" r="2"></circle>
-      <path d="M2 18 L18 2 30 2 30 14 14 30 Z"></path>
-    </svg>
-    &nbsp;
-    <a href="/tags/npm/">npm</a>
-
-
-  </div>
-</li>
-<hr>
-
-
-
-
-
-  
-    
-<li class="post-item">
-  
-  
-    <h1 class="index-title">
-        <a href="/2022/09/25/2022-9-24记/">
-            2022/9/24记
-        </a>
-    </h1>
-  
-
-
-  <div class="excerpt">
-  
-    我在很努力前进，向我想要的前进，我想要的不是所谓的那些。
-  
-  <a href="/2022/09/25/2022-9-24记/">
-    more
-  </a>
-  </div>
-  <div class="index-meta">
-    <time datetime="2022-09-25T01:32:56.000Z" itemprop="datePublished">
-  <svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
-  </svg>
-  &nbsp;
-  2022-09-25
-</time>
-
-
-
-
-
-    
-    &nbsp;
-    <svg class="i-tag" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-      <circle cx="24" cy="8" r="2"></circle>
-      <path d="M2 18 L18 2 30 2 30 14 14 30 Z"></path>
-    </svg>
-    &nbsp;
-    <a href="/tags/Myself/">Myself</a>
-
-
-  </div>
-</li>
-<hr>
-
-
-
-
-
-  
-    
-<li class="post-item">
-  
-  
-    <h1 class="index-title">
-        <a href="/2022/09/08/解决Anaconda关联VSCode使用conda运行Python报错/">
-            解决Anaconda关联VSCode使用conda运行Python报错
-        </a>
-    </h1>
-  
-
-
-  <div class="excerpt">
-  
-    错误刚安装好Anaconda之后创建好VS Code环境运行Python会报错,但是仍然是可以正常运行，强迫症想解决报错
-
-PS C:\Users\Satan\Documents\Code\Python&gt; conda activate
-  
-  <a href="/2022/09/08/解决Anaconda关联VSCode使用conda运行Python报错/">
-    more
-  </a>
-  </div>
-  <div class="index-meta">
-    <time datetime="2022-09-08T00:59:11.000Z" itemprop="datePublished">
-  <svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
-  </svg>
-  &nbsp;
-  2022-09-08
-</time>
-
-
-
-
-
-    
-    &nbsp;
-    <svg class="i-tag" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-      <circle cx="24" cy="8" r="2"></circle>
-      <path d="M2 18 L18 2 30 2 30 14 14 30 Z"></path>
-    </svg>
-    &nbsp;
-    <a href="/tags/Python/">Python</a>
-
-
-  </div>
-</li>
-<hr>
-
-
-
-
-
-  
-    
-<li class="post-item">
-  
-  
-    <h1 class="index-title">
-        <a href="/2022/09/08/Android-Studio运行Failed-to-find-Build-Tools-revision-30-0-3/">
-            Android Studio运行Failed to find Build Tools revision 30.0.3
-        </a>
-    </h1>
-  
-
-
-  <div class="excerpt">
-  
-    问题第一次安装好Android Studio2022.5的版本之后开启虚拟机运行文件报错提示
-
-Failed to find Build Tools revision 30.0.3
-
-打开SDK已经安装了33.0.0，报错提示找不到30.0
-  
-  <a href="/2022/09/08/Android-Studio运行Failed-to-find-Build-Tools-revision-30-0-3/">
-    more
-  </a>
-  </div>
-  <div class="index-meta">
-    <time datetime="2022-09-08T00:28:32.000Z" itemprop="datePublished">
-  <svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
-  </svg>
-  &nbsp;
-  2022-09-08
-</time>
-
-
-
-
-
-    
-    &nbsp;
-    <svg class="i-tag" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-      <circle cx="24" cy="8" r="2"></circle>
-      <path d="M2 18 L18 2 30 2 30 14 14 30 Z"></path>
-    </svg>
-    &nbsp;
-    <a href="/tags/Android/">Android</a>
-
-
-  </div>
-</li>
-<hr>
-
-
-
-
-
-  
-    
-<li class="post-item">
-  
-  
-    <h1 class="index-title">
-        <a href="/2022/06/22/PHP学习笔记/">
-            PHP学习笔记
-        </a>
-    </h1>
-  
-
-
-  <div class="excerpt">
-  
-    PHP语言基础
-PHP变量类型不需要申明，PHP会自动根据上下文进行判断
-
-//是单行注释，/* */是多行注释，注释语法格式是不可以嵌套使用的
-
-标量类型有四种：整形，布尔型，字符串型，浮点型 
-
-Heredoc结构用来赋予变量多行代码
-
-  
-  <a href="/2022/06/22/PHP学习笔记/">
-    more
-  </a>
-  </div>
-  <div class="index-meta">
-    <time datetime="2022-06-22T14:16:14.000Z" itemprop="datePublished">
-  <svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
-  </svg>
-  &nbsp;
-  2022-06-22
-</time>
-
-
-
-
-
-    
-    &nbsp;
-    <svg class="i-tag" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-      <circle cx="24" cy="8" r="2"></circle>
-      <path d="M2 18 L18 2 30 2 30 14 14 30 Z"></path>
-    </svg>
-    &nbsp;
-    <a href="/tags/学习笔记/">学习笔记</a>
-
-
-  </div>
-</li>
-<hr>
-
-
-
-
-
-  
-    
-<li class="post-item">
-  
-  
-    <h1 class="index-title">
-        <a href="/2022/06/12/Windows10下CSGO启动黑屏闪退/">
-            Windows10下CSGO启动黑屏闪退
-        </a>
-    </h1>
-  
-
-
-  <div class="excerpt">
-  
-    问题  很久没玩过CSGO了，前几天想着重温一下CSGO，安装好之后发现打开黑屏一会就闪退了，也没啥报错信息，网上查了下说是配置编程环境导致的问题
-解决方案  依次运行以下命令
-1234netsh advfirewall resetnets
-  
-  <a href="/2022/06/12/Windows10下CSGO启动黑屏闪退/">
-    more
-  </a>
-  </div>
-  <div class="index-meta">
-    <time datetime="2022-06-12T13:36:53.000Z" itemprop="datePublished">
-  <svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
-  </svg>
-  &nbsp;
-  2022-06-12
-</time>
-
-
-
-
-
-    
-    &nbsp;
-    <svg class="i-tag" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-      <circle cx="24" cy="8" r="2"></circle>
-      <path d="M2 18 L18 2 30 2 30 14 14 30 Z"></path>
-    </svg>
-    &nbsp;
-    <a href="/tags/小知识/">小知识</a>
-
-
-  </div>
-</li>
-<hr>
-
-
-
-
-
-  
-    
-<li class="post-item">
-  
-  
-    <h1 class="index-title">
-        <a href="/2022/06/08/利用线程实时显示时间/">
-            利用线程实时显示时间
-        </a>
-    </h1>
-  
-
-
-  <div class="excerpt">
-  
-    题目用线程的方式实现实时显示时钟
-思路理论上来说应该用JFrame配上Date来进行可视化时钟的实现，但是题目并没有过多解释，就用最简单的命令行实时刷新时间显示
-代码1234567891011121314151617181920212223
-  
-  <a href="/2022/06/08/利用线程实时显示时间/">
-    more
-  </a>
-  </div>
-  <div class="index-meta">
-    <time datetime="2022-06-08T01:44:50.000Z" itemprop="datePublished">
-  <svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
-  </svg>
-  &nbsp;
-  2022-06-08
-</time>
-
-
-
-
-
-    
-    &nbsp;
-    <svg class="i-tag" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-      <circle cx="24" cy="8" r="2"></circle>
-      <path d="M2 18 L18 2 30 2 30 14 14 30 Z"></path>
-    </svg>
-    &nbsp;
-    <a href="/tags/Java入门算法/">Java入门算法</a>
-
-
-  </div>
-</li>
-<hr>
-
-
-
-
-
-  
-    
-<li class="post-item">
-  
-  
-    <h1 class="index-title">
-        <a href="/2022/06/07/Pyinstaller打包exe报错/">
-            Pyinstaller打包exe报错
-        </a>
-    </h1>
-  
-
-
-  <div class="excerpt">
-  
-    起因用Python对程序进行打包成exe文件，之前习惯使用pyinstaller进行打包，好久没使用python了，下载了最新的python3.10，老样子用pip安装了pyinstaller，但是这次对文件进行打包的时候出现了报错
-123
-  
-  <a href="/2022/06/07/Pyinstaller打包exe报错/">
-    more
-  </a>
-  </div>
-  <div class="index-meta">
-    <time datetime="2022-06-07T02:22:53.000Z" itemprop="datePublished">
-  <svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
-  </svg>
-  &nbsp;
-  2022-06-07
-</time>
-
-
-
-
-
-    
-    &nbsp;
-    <svg class="i-tag" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-      <circle cx="24" cy="8" r="2"></circle>
-      <path d="M2 18 L18 2 30 2 30 14 14 30 Z"></path>
-    </svg>
-    &nbsp;
-    <a href="/tags/Python小知识/">Python小知识</a>
-
-
-  </div>
-</li>
-<hr>
-
-
-
-
-
-  
-    
-<li class="post-item">
-  
-  
-    <h1 class="index-title">
-        <a href="/2022/06/01/Windows10下休眠模式/">
-            Windows10下休眠模式
-        </a>
-    </h1>
-  
-
-
-  <div class="excerpt">
-  
-    起因经常用笔记本且系统是Windows的朋友可能会感觉自己外出啥的，电脑放包里电量流失的很快，有时电脑还会很烫，这个时候电脑就处于假死状态，没有真正的进入休眠，睡眠模式假死的概率相对来说很高，但是进电源计划里面逛了圈又没找到休眠的开关
-休眠
-  
-  <a href="/2022/06/01/Windows10下休眠模式/">
-    more
-  </a>
-  </div>
-  <div class="index-meta">
-    <time datetime="2022-06-01T03:41:15.000Z" itemprop="datePublished">
-  <svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
-  </svg>
-  &nbsp;
-  2022-06-01
-</time>
-
-
-
-
-
-    
-    &nbsp;
-    <svg class="i-tag" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-      <circle cx="24" cy="8" r="2"></circle>
-      <path d="M2 18 L18 2 30 2 30 14 14 30 Z"></path>
-    </svg>
-    &nbsp;
-    <a href="/tags/小知识/">小知识</a>
-
-
-  </div>
-</li>
-<hr>
-
-
-
-
-
-  
-    
-<li class="post-item">
-  
-  
-    <h1 class="index-title">
-        <a href="/2022/04/28/npm安装hexo报错/">
-            npm安装hexo报错
-        </a>
-    </h1>
-  
-
-
-  <div class="excerpt">
-  
-    报错提示123456789101112131415npm WARN saveError ENOENT: no such file or directory, open &#x27;/home/linux1/package.json&#x27
-  
-  <a href="/2022/04/28/npm安装hexo报错/">
-    more
-  </a>
-  </div>
-  <div class="index-meta">
-    <time datetime="2022-04-28T02:20:16.000Z" itemprop="datePublished">
-  <svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
-  </svg>
-  &nbsp;
-  2022-04-28
-</time>
-
-
-
-
-
-
-  </div>
-</li>
-<hr>
-
-
-
-
-
-  
-</ul>
-<ul class="pager">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next</a>
-</ul>
-
-
-    </div>
-  </div>
-  <footer class="page-footer"><div class="clearfix">
 </div>
-<div class="right-foot">
-    <div class="firstrow">
-        <a href="#top" target="_self">
-        <svg class="i-caret-right" viewBox="0 0 32 32" width="24" height="24" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-            <path d="M10 30 L26 16 10 2 Z"></path>
-        </svg>
-        </a>
-        © XXX 2016-2020
-    </div>
-    <div class="secondrow">
-        <a target="_blank" rel="noopener" href="https://github.com/gaoryrt/hexo-theme-pln">
-        Theme Pln
-        </a>
-    </div>
+
+
+<script src="/js/activeNav.js"></script>
+
+
+
+      <div class="flex-container">
+        <div class="container index">
+  <div class="post-list">
+    <!-- 遍历渲染文章 -->
+    
+      <div class="post-item" title="npm卸载"Tracker idealTree already exists"">
+        <div class="time-m-d">2022-09-25</div>
+        <div class="title">
+          <a href="/2022/09/25/npm%E5%8D%B8%E8%BD%BDTracker-idealTree-already-exists/">
+            
+              
+                <span>npm卸载"Tracker idealTree already exists"</span>
+              
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="2022/9/24记">
+        <div class="time-m-d">2022-09-25</div>
+        <div class="title">
+          <a href="/2022/09/25/2022-9-24%E8%AE%B0/">
+            
+              
+                <span>2022/9/24记</span>
+              
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="解决Anaconda关联VSCode使用conda运行Python报错">
+        <div class="time-m-d">2022-09-08</div>
+        <div class="title">
+          <a href="/2022/09/08/%E8%A7%A3%E5%86%B3Anaconda%E5%85%B3%E8%81%94VSCode%E4%BD%BF%E7%94%A8conda%E8%BF%90%E8%A1%8CPython%E6%8A%A5%E9%94%99/">
+            
+              
+                <span>解决Anaconda关联VSCode使用conda运行Python报错</span>
+              
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="Android Studio运行Failed to find Build Tools revision 30.0.3">
+        <div class="time-m-d">2022-09-08</div>
+        <div class="title">
+          <a href="/2022/09/08/Android-Studio%E8%BF%90%E8%A1%8CFailed-to-find-Build-Tools-revision-30-0-3/">
+            
+              
+                <span>Android Studio运行Failed to find Build Tools revision 30.0.3</span>
+              
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="PHP学习笔记">
+        <div class="time-m-d">2022-06-22</div>
+        <div class="title">
+          <a href="/2022/06/22/PHP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+            
+              
+                <span>PHP学习笔记</span>
+              
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="Windows10下CSGO启动黑屏闪退">
+        <div class="time-m-d">2022-06-12</div>
+        <div class="title">
+          <a href="/2022/06/12/Windows10%E4%B8%8BCSGO%E5%90%AF%E5%8A%A8%E9%BB%91%E5%B1%8F%E9%97%AA%E9%80%80/">
+            
+              
+                <span>Windows10下CSGO启动黑屏闪退</span>
+              
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="利用线程实时显示时间">
+        <div class="time-m-d">2022-06-08</div>
+        <div class="title">
+          <a href="/2022/06/08/%E5%88%A9%E7%94%A8%E7%BA%BF%E7%A8%8B%E5%AE%9E%E6%97%B6%E6%98%BE%E7%A4%BA%E6%97%B6%E9%97%B4/">
+            
+              
+                <span>利用线程实时显示时间</span>
+              
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="Pyinstaller打包exe报错">
+        <div class="time-m-d">2022-06-07</div>
+        <div class="title">
+          <a href="/2022/06/07/Pyinstaller%E6%89%93%E5%8C%85exe%E6%8A%A5%E9%94%99/">
+            
+              
+                <span>Pyinstaller打包exe报错</span>
+              
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="Windows10下休眠模式">
+        <div class="time-m-d">2022-06-01</div>
+        <div class="title">
+          <a href="/2022/06/01/Windows10%E4%B8%8B%E4%BC%91%E7%9C%A0%E6%A8%A1%E5%BC%8F/">
+            
+              
+                <span>Windows10下休眠模式</span>
+              
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="npm安装hexo报错">
+        <div class="time-m-d">2022-04-28</div>
+        <div class="title">
+          <a href="/2022/04/28/npm%E5%AE%89%E8%A3%85hexo%E6%8A%A5%E9%94%99/">
+            
+              
+                <span>npm安装hexo报错</span>
+              
+            
+          </a>
+        </div>
+      </div>
+    
+  </div>
+  <nav class="post-navigation">
+    
+    <span class="page-num">1 / 3</span>
+    
+      <a href="/page/2/"><i class="iconfont icon-angleright"></i></a>
+    
+  </nav>
 </div>
-<div class="clearfix">
+
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          <a title="github" target="_blank" rel="noopener" href="https://github.com/Bztiks/bztiks.github.io">
+            <i class="iconfont icon-github"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="email" href="">
+            <i class="iconfont icon-envelope"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="facebook" href="">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="twitter" target="_blank" rel="noopener" href="https://twitter.com/Satantik7">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="wechat" href="">
+            <i class="iconfont icon-wechat"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="weibo" href="">
+            <i class="iconfont icon-weibo"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="rss" href="/atom.xml">
+            <i class="iconfont icon-rss"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/Bztiks">Enjoy time</a>
+        
+    </div>
+  
+    <div class="footer-more">
+      
+        Power By Person
+    </br>
+ 	</span>  
+	  
+    </div>
+  
 </div>
-</footer>
-  <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
-<script src="/js/search.min.js"></script>
-<script type="text/javascript">
 
-// disqus scripts
+      </div>
+
+      <div class="tools-bar">
+        <div class="back-to-top tools-bar-item hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
 
 
-// dropdown scripts
-$(".dropdown").click(function(event) {
-  var current = $(this);
-  event.stopPropagation();
-  $(current).children(".dropdown-content")[($(current).children(".dropdown-content").hasClass("open"))?'removeClass':'addClass']("open")
-});
-$(document).click(function(){
-    $(".dropdown-content").removeClass("open");
-})
+<script src="/js/backtotop.js"></script>
 
-var path = "/search.xml";
-searchFunc(path, 'local-search-input', 'local-search-result');
 
-</script>
 
-</body>
+        
+  <div class="search-icon tools-bar-item" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-title">
+        <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-search"></i>
+          </a>
+        </span>
+        
+          <input type="text" class="search-input" id="search-input" placeholder="Search...">
+        
+        <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-close"></i>
+          </a>
+        </span>
+      </div>
+      <div class="search-result" id="search-result"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    inputArea.onclick = function() {
+      getSearchFile()
+      this.onclick = null
+    }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        // inputArea.focus()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'>" + orig_data_title + "</a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<p class=\"search-result-abstract\">" + match_content + "...</p>"
+                }
+                str += "</li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>No result<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The search.xml file was not found, please refer to：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The request failed, Try to refresh the page or try again later.<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
+        
+  <div class="tools-bar-item theme-icon" id="switch-color-scheme">
+    <a href="javascript: void(0)">
+      <i id="theme-icon" class="iconfont icon-moon"></i>
+    </a>
+  </div>
+
+  
+<script src="/js/colorscheme.js"></script>
+
+
+
+
+
+        
+  
+  
+<script src="/js/shares.js"></script>
+
+
+
+      </div>
+    </div>
+  </body>
 </html>
