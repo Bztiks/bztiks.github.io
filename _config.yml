@@ -102,5 +102,5 @@ theme: oranges
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: 'git'
-  repo: git@github.com:Bztiks/bztiks.github.io.git
+  repo: https://github.com/Bztiks/bztiks.github.io.git
   branch: Bztik
