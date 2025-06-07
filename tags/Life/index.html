@@ -178,6 +178,8 @@
     
     
     
+      <a id="nav-search-btn" class="nav-icon popup-trigger" title="Search"></a>
+    
   </nav>
   
 </div>
@@ -188,7 +190,7 @@
         
       </picture>
       
-        <img  fetchpriority="high" src="/images/banner.webp" alt="">
+        <img  fetchpriority="high" src="/images/banner.png" alt="">
       
     
   
@@ -483,6 +485,22 @@
 
     </div>
     
+      <div class="site-search">
+        <div class="reimu-popup popup">
+          <div class="reimu-search">
+            <div class="reimu-search-input-icon"></div>
+            <div class="reimu-search-input" id="reimu-search-input"></div>
+            <div class="popup-btn-close"></div>
+          </div>
+          <div class="reimu-results">
+            <div id="reimu-stats"></div>
+            <div id="reimu-hits"></div>
+            <div id="reimu-pagination" class="reimu-pagination"></div>
+          </div>
+          <img class="reimu-bg" src="/images/reimu.png"/>
+        </div>
+      </div>
+    
     
     
     
@@ -522,6 +540,10 @@
 
 <script src="/js/pjax_script.js" data-pjax></script>
 
+
+
+  
+<script src="/js/generator_search.js" defer></script>
 
 
 
