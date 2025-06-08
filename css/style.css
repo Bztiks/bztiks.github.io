@@ -40,9 +40,9 @@
   --highlight-aqua: #479d9d;
   --highlight-blue: #1973b8;
   --highlight-purple: #7135ac;
-  --cursor-default: url("../images/cursor/reimu-cursor-default.png"), auto;
-  --cursor-pointer: url("../images/cursor/reimu-cursor-pointer.png"), pointer;
-  --cursor-text: url("../images/cursor/reimu-cursor-text.png"), text;
+  --cursor-default: default;
+  --cursor-pointer: pointer;
+  --cursor-text: text;
   --footer-icon: url("../images/taichi.png");
   --sponsor-icon: url("../images/taichi.png");
   --top-icon: url("../images/taichi.png");
@@ -1464,6 +1464,16 @@ button {
   max-width: 100%;
   margin: 0 auto;
 }
+mjx-container {
+  display: inline-grid;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  min-width: auto !important;
+}
+mjx-container::-webkit-scrollbar {
+  display: none;
+}
 .post-link {
   position: absolute;
   top: 0;
@@ -1648,6 +1658,92 @@ button {
 }
 .post-sticky:before {
   margin-right: 5px;
+}
+.post-categories-wrapper {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 767px) {
+  .post-categories-wrapper {
+    flex-direction: column;
+  }
+}
+.post-categories-wrapper.aos-animate {
+  transition-property: initial !important;
+}
+.post-categories-wrap {
+  width: calc(50% - 20px);
+  flex-grow: 1;
+  height: 230px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 1s;
+}
+@media screen and (max-width: 767px) {
+  .post-categories-wrap {
+    width: 100%;
+    height: 180px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .post-categories-wrap:hover {
+    transform: scale(1.01);
+  }
+  .post-categories-wrap:hover img {
+    opacity: 0.6 !important;
+    transform: scale(1.05);
+  }
+}
+.post-categories-cover {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  min-height: 95px;
+  flex-shrink: 0;
+  pointer-events: none;
+  transition: 0.6s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+@media screen and (max-width: 767px) {
+  .post-categories-cover {
+    width: 100%;
+  }
+}
+.post-categories-cover img {
+  display: block;
+  opacity: 0;
+  transition: 0.6s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.post-categories-cover img.lazyloaded {
+  opacity: 0.7;
+  animation: blur 0.8s forwards;
+}
+.post-categories-cover h2,
+.post-categories-cover h3 {
+  z-index: 1;
+  color: #fff;
+  text-shadow: 0 0.2rem 0.3rem rgba(0,0,0,0.5);
+  margin: 0 5px;
+}
+.post-categories-cover h2 {
+  font-size: 35px;
+}
+.post-categories-cover h3 {
+  font-size: 20px;
+  margin-top: 30px;
 }
 #comments {
   background: var(--color-wrap);
@@ -2186,22 +2282,8 @@ button {
 .footer-info-sep.rotate {
   animation: rotate-all 3s linear infinite;
 }
-@supports (-webkit-mask: var(--footer-icon) no-repeat center/80%) {
-  .footer-info-sep {
-    background-color: var(--red-1);
-    -webkit-mask: var(--footer-icon) no-repeat center/80%;
-  }
-}
-@supports (mask: var(--footer-icon) no-repeat center/80%) {
-  .footer-info-sep {
-    background-color: var(--red-1);
-    mask: var(--footer-icon) no-repeat center/80%;
-  }
-}
-@supports not ((mask: var(--footer-icon) no-repeat center/80%) and (-webkit-mask: var(--footer-icon) no-repeat center/80%)) {
-  .footer-info-sep {
-    background: var(--footer-icon) no-repeat center/80%;
-  }
+.footer-info-sep {
+  background: var(--footer-icon) no-repeat center/80%;
 }
 @media screen and (min-width: 960px) {
   #mobile-nav {
